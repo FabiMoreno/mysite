@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Fabián Moreno - Product Designer - Trocando Pharma">
+  <!--Componente Nav -->
+  <Navbar />
+
+  <section class="flex justify-center flex-col max-w-4xl mx-auto pt-36">
+    <h1>Trocando - Pharma</h1>
+
+    <ul
+      class="flex items-center gap-8 [&>li]:flex [&>li]:flex-col [&>li]:items-start"
+    >
+      <li>
+        <h4>Cliente</h4>
+        <p>Trocando</p>
+      </li>
+
+      <li>
+        <h4>Rol</h4>
+        <p>Lead product designer</p>
+      </li>
+
+      <li>
+        <h4>Plazo</h4>
+        <p>2 meses</p>
+      </li>
+
+      <li>
+        <h4>Link</h4>
+        <p>view Website</p>
+      </li>
+    </ul>
+  </section>
+
+  <div>
+    <img src="../../src/img/previewTrocando_1x.webp" alt="" class="" />
+  </div>
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto">
+    <h4>
+      Para mediados de Mayo de 2023, inicié la gestión y diseño del MVP para una
+      nueva plataforma que propone una solución para optimizar la gestión y
+      comercialización de medicamentos, insumos, descartables, dispositivos
+      médicos, equipamientos y accesorios.
+    </h4>
+
+    <section>
+      <h2>Descubrir y empatizar</h2>
+      <h4>Entendiendo el negocio</h4>
+      <img src="../../src/img/trocando01_1x.webp" alt="" class="rounded-lg" />
+      <p>
+        Iniciamos desde cero, entendiendo el negocio, la propuesta de valor y el
+        scope del proyecto. Para esto realizamos diferentes reuniones y
+        workshops para poner en común las definiciones, usuarios y
+        funcionalidades core para todo el equipo. Con esto, empezamos a bocetar
+        los flujos de alto nivel necesarios para las funcionalidades y las
+        lógicas propias del negocio.
+      </p>
+    </section>
+
+    <section>
+      <h2>Definir e idear</h2>
+      <h4>Primeros insights, ideas y soluciones</h4>
+
+      <img src="../../src/img/trocando02_1x.webp" alt="" class="rounded-lg" />
+      <p>
+        El desafío más importante del proyecto fue el tiempo. Por esto, junto
+        con el dueño del producto, decidimos realizar un proceso de research
+        rápido y enfocarnos en tener una versión funcional lo antes posible. Fue
+        necesario diseñar los elementos básicos de marca como la paleta de
+        color, tipografía, logotipo y aplicaciones básicas. Esto también fue
+        importante para diseñar los wireframes de alta calidad y flujos finales.
+      </p>
+    </section>
+  </main>
+
+  <!-- Sección completa para Quote -->
+  <blockquote
+    class="flex flex-col max-w-full bg-gradient-to-r from-sky-500 to-indigo-500"
+  >
+    <h3 class="max-w-4xl items-center mx-auto">
+      “Even the best designers produce successful products only if their design
+      solve the right problems. A wonderful interface to the wrong features will
+      fail”
+    </h3>
+    <p class="max-w-4xl items-center mx-auto">Jakob Nielsen</p>
+  </blockquote>
+  <!-- termina Quote -->
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto">
+    <section>
+      <h2>Prototipar e iterar</h2>
+      <h4>Componentes y flujos de navegación</h4>
+
+      <div
+        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
+      >
+        <img src="../../src/img/trocando03_1x.webp" alt="" class="rounded-lg" />
+      </div>
+      <p>
+        Diseñe los componentes necesarios para la primera versión de nuestro
+        Design System. Cree el Handoff con toda la documentación detallada para
+        el equipo de desarrollo y validamos la factibilidad técnica del MVP con
+        el equipo de desarrollo para detectar los principales riesgos y
+        seguimiento del producto.
+      </p>
+
+      <div
+        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
+      >
+        <img src="../../src/img/trocando04_1x.webp" alt="" class="rounded-lg" />
+      </div>
+      <p>
+        Conforme fuimos avanzando sobre pruebas de calidad media, se hacía
+        evidente la necesidad de afinar una propuesta de rediseño de marca. Por
+        esto, organizamos un Brand Sprint para poner en común el imaginario y la
+        definición de Quiena como marca. Esto nos ayudo a poner en común y
+        decidir una primera versión del Brand Guidelines de Quiena.
+      </p>
+    </section>
+  </main>
+
+    <!-- Full width image -->
+    <div>
+      <img src="../../src/img/trocando-results_1x.webp" alt="" class="" />
+    </div>
+    <!-- Ends full width image -->
+
+    <section class="flex justify-center flex-col max-w-4xl mx-auto">
+      <h2>Resultados</h2>
+      <p>
+        Logramos tener una versión de MVP de la plataforma en en el tiempo
+        propuesto. Además de brindar asesoría para mejorar la experiencia de
+        usuario y acompañar el proceso de ajuste al mercado del producto.
+      </p>
+    </section>
+
+    <!-- Full widht CTA  -->
+    <div class="max-w-full bg-gradient-to-r from-[#29233B] to-[#342856]">
+      <div class="flex flex-row max-w-4xl items-center mx-auto">
+        <h3 class="">
+          Si te interesa saber más sobre este y otros proyectos puedes
+          contactarme.
+        </h3>
+        <button>Contáctame</button>
+      </div>
+    </div>
+    <!-- ends Quote -->
+
+    <Footer />
+ 
+</Layout>

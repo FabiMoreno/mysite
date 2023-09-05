@@ -1,0 +1,232 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Fabián Moreno - Product Designer - Inmobiliaria digital">
+  <!--Componente Nav -->
+  <Navbar />
+
+  <section class="flex justify-center flex-col max-w-4xl mx-auto pt-36">
+    <h1>Inmobiliaria Digital</h1>
+
+    <ul
+      class="flex items-center gap-8 [&>li]:flex [&>li]:flex-col [&>li]:items-start"
+    >
+      <li>
+        <h4>Cliente</h4>
+        <p>Privado</p>
+      </li>
+
+      <li>
+        <h4>Rol</h4>
+        <p>Lead Product designer</p>
+      </li>
+
+      <li>
+        <h4>Plazo</h4>
+        <p>6 meses</p>
+      </li>
+    </ul>
+  </section>
+
+  <div>
+    <img
+      src="../../src/img/previewInmobiliariaDigital_1x.webp"
+      alt=""
+      class=""
+    />
+  </div>
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto">
+    <h4>
+      El 2019 empezó con un gran desafío, me contactaron para investigar y
+      colaborar en una plataforma para comprar y vender propiedades. Un proyecto
+      desde cero con el reto de llevar el proceso de investigación, ideación,
+      definición y diseño.
+    </h4>
+
+    <section>
+      <h2>Discovery</h2>
+      <h4>Entendiendo el negocio</h4>
+      <img
+        src="../../src/img/inmobiliaria01_1x.webp"
+        alt=""
+        class="rounded-lg"
+      />
+      <p>
+        Empezamos por entender, investigar y definir en equipo la primera
+        versión MVP del producto. Al partir de una industria con un mercado muy
+        desarrollado, uno de los primeros procesos que realizamos fue un
+        Costumer Journey mapping del proceso convencional para detectar los
+        principales puntos de fricción. Así, fuimos descubriendo y definiendo
+        juntos las hipótesis de trabajo y propuesta de valor del producto a
+        través de herramientas como benchmarks, entrevistas, encuestas etc.
+      </p>
+    </section>
+
+    <section>
+      <h2>Empatizar y definir</h2>
+      <h4>Poniendo expectativas en común</h4>
+
+      <img
+        src="../../src/img/inmobiliaria02_1x.webp"
+        alt=""
+        class="rounded-lg"
+      />
+      <p>
+        Agrupamos todas las funcionalidades en diferentes categorías, luego
+        puntuamos cada una en aspectos como costo de desarrollo, impacto en los
+        usuarios, diferencial en el mercado, rentabilidad y costo de
+        mantenimiento. De esta manera hicimos mensurables las funcionalidades
+        para poder votar y priorizar. Finalmente decidimos cuales serían
+        nuestras funcionalidades base, o ”Must Have” (MH), que en otras
+        palabras, son las prioridades para negocio, tecnología, experiencia y
+        producto. Con esta lista de prioridades, fuimos iterando sobre
+        diferentes propuestas de Arquitectura del producto. Mientras tanto, en
+        paralelo fuimos validando nuestras hipótesis a través de encuestas y
+        entrevistas a las user personas que habíamos detectado en anteriores
+        workshops.
+      </p>
+      <div
+        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
+      >
+        <img
+          src="../../src/img/inmobiliaria03_1x.webp"
+          alt=""
+          class="rounded-lg"
+        />
+        <img
+          src="../../src/img/inmobiliaria04_1x.webp"
+          alt=""
+          class="rounded-lg"
+        />
+      </div>
+      <p>
+        Con todo lo aprendido de nuestros usuarios fuimos ajustando la
+        arquitectura de producto y avanzando sobre el flujo y navegación de los
+        usuarios. Recopilamos data cualitativa a través de las entrevistas,
+        detectando patrones, casos de uso y fricciones comunes. Esta información
+        fue clave para confeccionar encuestas más asertivas para cuantificar,
+        medir y validar nuestros aprendizajes.
+      </p>
+    </section>
+  </main>
+
+  <!-- Sección completa para Quote -->
+  <blockquote
+    class="flex flex-col max-w-full bg-gradient-to-r from-sky-500 to-indigo-500"
+  >
+    <h3 class="max-w-4xl items-center mx-auto">
+      “Design is not just what it looks like, design is how it works”
+    </h3>
+    <p class="max-w-4xl items-center mx-auto">Steve Jobs</p>
+  </blockquote>
+  <!-- termina Quote -->
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto">
+    <section>
+      <h2>Explorando posibles soluciones</h2>
+      <h4>Convirtiendo los aprendizajes en propuestas</h4>
+
+      <div
+        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
+      >
+        <img
+          src="../../src/img/inmobiliaria05_1x.webp"
+          alt=""
+          class="rounded-lg"
+        />
+      </div>
+      <p>
+        Diseñamos los flujos de los usuarios y las primeras pantallas en baja
+        para empezar plantear propuestas de interfaz y navegación. Muchas de
+        estos prototipos iniciales los compartimos con algunos usuarios en
+        entrevistas y nos ayudaron a seguir iterando sobre el contenido,
+        lenguaje y la navegación de los mismos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Iterando y ajustando detalles</h2>
+      <h4>De lo general a lo especifico</h4>
+
+      <div
+        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
+      >
+        <img
+          src="../../src/img/inmobiliaria06_1x.webp"
+          alt=""
+          class="rounded-lg"
+        />
+      </div>
+      <p>
+        Diseñamos un estilo visual simple y funcional, trabajamos para crear una
+        interfaz conversacional y fuimos afinando cada detalle. Determinamos los
+        datos básicos de creación de usuarios, de publicación y planteamos una
+        primera propuesta de monetización freemium, donde los usuarios pagarían
+        por mejores opciones de publicación, asesoría o simplemente la
+        plataforma se encargaría de todo el proceso de compra o venta.
+      </p>
+    </section>
+
+    <section>
+      <h2>Design system y Handoff</h2>
+      <h4>Documentación para desarrollar y salir al mercado</h4>
+
+      <div
+        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
+      >
+        <img
+          src="../../src/img/inmobiliaria07_1x.webp"
+          alt=""
+          class="rounded-lg"
+        />
+      </div>
+      <p>
+        Finalmente diseñamos cada uno de los componentes y estados para nuestro
+        design system, documentando todos los flujos y wireframes de alta
+        calidad para el equipo de desarrollo.
+      </p>
+    </section>
+  </main>
+
+  <!-- Full width image -->
+  <div>
+    <img src="../../src/img/inmobiliaria-results_1x.webp" alt="" class="" />
+  </div>
+  <!-- Ends full width image -->
+
+  <section class="flex justify-center flex-col max-w-4xl mx-auto">
+    <h2>Resultados</h2>
+    <p>
+      Desde el principio, nuestro objetivo principal fue comprender a fondo las
+      necesidades y deseos de nuestros usuarios, y para lograrlo, nos sumergimos
+      en un proceso de investigación de usuario minucioso, recopilando datos y
+      retroalimentación valiosa. A medida que avanzábamos, utilizamos esta
+      información para crear flujos de usuario que garantizaran una experiencia
+      intuitiva y atractiva. Para mantener la coherencia y la eficiencia en todo
+      el proceso de diseño, creamos un robusto sistema de diseño que sirvió como
+      base para todas las decisiones de diseño posteriores. Este design system
+      no solo garantizó una consistencia visual en todos los elementos de la
+      aplicación, sino que también facilitó la colaboración con el equipo de
+      desarrollo, agilizando el proceso de implementación y puesta en el
+      mercado.
+    </p>
+  </section>
+
+  <!-- Full widht CTA  -->
+  <div class="max-w-full bg-gradient-to-r from-[#29233B] to-[#342856]">
+    <div class="flex flex-row max-w-4xl items-center mx-auto">
+      <h3 class="">
+        Si te interesa saber más sobre este y otros proyectos puedes
+        contactarme.
+      </h3>
+      <button>Contáctame</button>
+    </div>
+  </div>
+  <!-- ends Quote -->
+
+  <Footer />
+</Layout>

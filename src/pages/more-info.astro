@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Más info - Fabián Moreno - Product Designer">
+  <Navbar />
+  <main class="pt-36 flex flex-col justify-center max-w-7xl mx-auto">
+    <h1>Más info</h1>
+
+    <img
+      src="../../src/img/profileImg_2x.webp"
+      alt="foto de Fabián Moreno"
+      class="w-[320px]"
+    />
+    <h4>
+      Hola, soy Fabián Moreno, Senior UX designer He liderado equipos UX en
+      aplicaciones web y nativas para la industria TechEd, PropTech, Healthtech
+      y Fintech. Gracias a mi pasión por la tecnología y el Front-end tengo gran
+      facilidad para comunicarme y gestionar equipos de producto.
+    </h4>
+    <button type="button">Descargar CV</button>
+    <button type="button">Check LinkedIn</button>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>
+        ¿Tienes un proyecto en mente o simplemente quieres enviar un saludo o
+        hacer alguna pregunta?
+      </p>
+      <form action="" method="post" name="contact-form">
+        <div class="mb-6">
+          <label for="POST-name"
+            >Nombre:
+            <input type="text" name="name" />
+          </label>
+        </div>
+
+        <div class="mb-6">
+          <label for="POST-mail"
+            >Mail:
+            <input type="email" name="email" />
+          </label>
+        </div>
+
+        <div class="mb-6">
+          <label for="POST-name"
+            >Subject:
+            <input type="text" name="subject" />
+          </label>
+        </div>
+
+        <div class="mb-6">
+          <label for="POST-name"
+            >Mensaje:
+            <textarea name="message" rows="10"></textarea>
+
+            <button type="submit">Enviar</button>
+          </label>
+        </div>
+      </form>
+    </section>
+  </main>
+  <Footer />
+</Layout>

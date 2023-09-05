@@ -1,10 +1,98 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1 class="text-5xl" >Incio de my site </h1>
-	</main>
-</Layout>
+<Layout title="Fabián Moreno - Product Designer">
+  <!--Componente Nav -->
+  <Navbar />
 
+  <main class="flex justify-center flex-col max-w-7xl mx-auto">
+    <section class="bg-slate-300 pt-36 flex flex-col justify-center">
+      <h1>Hola 👋🏼 soy Fabián Sr Product Designer</h1>
+      <h3>
+        Sr UX Designer con más de 10 años de experiencia desarrollando productos
+        que generen un impacto positivo en las personas.
+      </h3>
+      <button type="button">Ver proyectos</button>
+      <button type="button">Contáctame</button>
+    </section>
+
+    <h2>Proyectos destacados</h2>
+    <p>De proyectos inmobilidarios a Fintech</p>
+
+    <article class="grid grid-cols-1 gap-8 content-start">
+      <a href="/trocando/" class="">
+        <img
+          src="../../src/img/previewTrocando_1x.webp"
+          alt=""
+          class="rounded-t-lg"
+        />
+        <h2>Trocando - Pharma</h2>
+        <button> Icono</button>
+        <p>
+          Diseño MVP para plataforma de compra y venta de productos
+          farmacéuticos en Argentina
+        </p>
+        <div>UX LEAD</div>
+        <div>2023</div>
+      </a>
+
+      <a href="/quiena-automatica/" class="">
+        <img
+          src="../../src/img/previewQuiena_1x.webp"
+          alt=""
+          class="rounded-t-lg"
+        />
+        <h2>Quiena Automática</h2>
+        <button> Icono</button>
+        <p>
+          Diseño de App nativa para el producto de inversión automático en
+          WallStreet
+        </p>
+        <div>UX LEAD</div>
+        <div>2023</div>
+      </a>
+
+      <a href="/inmobiliaria-digital/" class="">
+        <img
+          src="../../src/img/previewInmobiliariaDigital_1x.webp"
+          alt=""
+          class="rounded-t-lg"
+        />
+        <h2>Inmobiliaria digital</h2>
+        <button> Icono</button>
+        <p>
+			Diseño de app nativa para la compra y venta de propiedades en Buenos Aires y Argentina
+        </p>
+        <div>UX LEAD</div>
+        <div>2023</div>
+      </a>
+
+      <a href="/daria/" class="">
+        <img
+          src="../../src/img/previewDaria_1x.webp"
+          alt=""
+          class="rounded-t-lg"
+        />
+        <h2>D'aria Propiedades</h2>
+        <button> Icono</button>
+        <p>
+			Rediseño del sitio de  D’aria propiedades para alquilar, comprar y vender propiedades
+        </p>
+        <div>UX LEAD</div>
+        <div>2023</div>
+      </a>
+    </article>
+  </main>
+  <section>
+    <h2>
+      ¿Estas creando un proyecto, necesitas asesoría o simplemente quieres
+      enviar un saludo?
+    </h2>
+    <button type="button">Contáctame</button>
+  </section>
+
+  <Footer />
+</Layout>
