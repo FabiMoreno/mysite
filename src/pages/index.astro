@@ -9,25 +9,25 @@ import Footer from "../components/Footer.astro";
   <Navbar />
 
   <main class="flex justify-center flex-col max-w-7xl mx-auto">
-    <section class="bg-slate-300 pt-36 flex flex-col justify-center">
-      <h1>Hola 👋🏼 soy Fabián Sr Product Designer</h1>
-      <h3>
+    <section class=" bg-bg-primary pt-36 flex flex-col justify-center">
+      <h1 class=" text-text-title">Hola 👋🏼 soy Fabián Sr Product Designer</h1>
+      <h3 class="">
         Sr UX Designer con más de 10 años de experiencia desarrollando productos
         que generen un impacto positivo en las personas.
       </h3>
-      <button type="button">Ver proyectos</button>
+      <button type="button" class=" bg-button-bgPrimary"><span class="">Ver proyectos</span></button>
       <button type="button">Contáctame</button>
     </section>
 
     <h2>Proyectos destacados</h2>
     <p>De proyectos inmobilidarios a Fintech</p>
 
-    <article class="grid grid-cols-1 gap-8 content-start">
+    <article class="grid grid-cols-1 gap-8 content-start bg-bg-primary text-bg-primary">
       <a href="/trocando/" class="">
         <img
           src="../../src/img/previewTrocando_1x.webp"
           alt=""
-          class="rounded-t-lg"
+          class="rounded-t-lg dark:rounded-t-3xl"
         />
         <h2>Trocando - Pharma</h2>
         <button> Icono</button>
@@ -47,7 +47,7 @@ import Footer from "../components/Footer.astro";
         />
         <h2>Quiena Automática</h2>
         <button> Icono</button>
-        <p>
+        <p class="bg-text-body">
           Diseño de App nativa para el producto de inversión automático en
           WallStreet
         </p>

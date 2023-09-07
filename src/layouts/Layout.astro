@@ -1,13 +1,13 @@
 ---
+import "../index.css";
 interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="Fabián Moreno - Product Designer" content="Sr UX Designer con más de 10 años de experiencia desarrollando productos que generen un impacto positivo en las personas." />
@@ -16,116 +16,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="selection:bg-violet-300 selection:text-violet-900">
+  <body class="selection:bg-violet-300 selection:text-violet-900  bg-bg-primary">
     <slot />
   </body>
 </html>
 
 <style is:global>
 
-  @font-face {
-      font-family: "Outfit-Variable";
-      src: url("../fonts/Outfit-Variable.woff2") format("woff2");
-      font-weight: 100 900;
-      font-display: swap;
-      font-style: normal;
-    }
 
-    @font-face {
-      font-family: "Outfit-Thin";
-      src: url("../fonts/Outfit-Thin.woff2") format("woff2");
-      font-weight: 100;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-ExtraLight";
-      src: url("../fonts/Outfit-ExtraLight.woff2") format("woff2");
-      font-weight: 200;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-Light";
-      src: url("../fonts/Outfit-Light.woff2") format("woff2");
-      font-weight: 300;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-Regular";
-      src: url("../fonts/Outfit-Regular.woff2") format("woff2");
-      font-weight: 400;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-Medium";
-      src: url("../fonts/Outfit-Medium.woff2") format("woff2"),
-        url("../fonts/Outfit-Medium.woff") format("woff"),
-        url("../fonts/Outfit-Medium.ttf") format("truetype");
-      font-weight: 500;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-SemiBold";
-      src: url("../fonts/Outfit-SemiBold.woff2") format("woff2");
-      font-weight: 600;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-Bold";
-      src: url("../fonts/Outfit-Bold.woff2") format("woff2");
-      font-weight: 700;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-ExtraBold";
-      src: url("../fonts/Outfit-ExtraBold.woff2") format("woff2");
-      font-weight: 800;
-      font-display: swap;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Outfit-Black";
-      src: url("../fonts/Outfit-Black.woff2") format("woff2");
-      font-weight: 900;
-      font-display: swap;
-      font-style: normal;
-    }
-
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
- 
-
-    
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #ffffff;
-    background-size: 224px;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
 </style>
