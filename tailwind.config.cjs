@@ -5,11 +5,129 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		fontFamily:{
-			sans: ['Outfit-Regular, sans-serif']
+			outfit: ['Outfit-variable, sans-serif']
+		},
+		
+    fontSize:{
+			largeDesktop: [
+        '72px',
+        {
+          lineHeight: '84px',
+          letterSpacing: '-1.44px',
+          fontWeight: 700,
+        },
+      ],
+			largeMobile: [
+        '56px',
+        {
+          lineHeight: '64px',
+          letterSpacing: '-1.12px',
+          fontWeight: 700,
+        },
+      ],
+			title1: [
+        '40px',
+        {
+          lineHeight: '48px',
+          letterSpacing: '-0.8px',
+          fontWeight: 600,
+        },
+      ],
+			title2: [
+        '32px',
+        {
+          lineHeight: '36px',
+          letterSpacing: '-0.32px',
+          fontWeight: 600,
+        },
+      ],
+			title2: [
+        '32px',
+        {
+          lineHeight: '36px',
+          letterSpacing: '-0.32px',
+          fontWeight: 600,
+        },
+      ],
+      title3: [
+        '24px',
+        {
+          lineHeight: '32px',
+          letterSpacing: '-0.24px',
+          fontWeight: 600,
+        },
+      ],
+      subtitle1: [
+        '21px',
+        {
+          lineHeight: '32px',
+          letterSpacing: '-0.21px',
+          fontWeight: 400,
+        },
+      ],
+      subtitle2: [
+        '18px',
+        {
+          lineHeight: '18px',
+          letterSpacing: '-0.18px',
+          fontWeight: 600,
+        },
+      ],
+      bodyText: [
+        '18px',
+        {
+          lineHeight: '28px',
+          letterSpacing: 'auto',
+          fontWeight: 400,
+        },
+      ],
+      actionText: [
+        '16px',
+        {
+          lineHeight: '24px',
+          letterSpacing: 'auto',
+          fontWeight: 600,
+        },
+      ],
+      bodyTextSm: [
+        '14px',
+        {
+          lineHeight: '20px',
+          letterSpacing: 'auto',
+          fontWeight: 400,
+        },
+      ],
+      captionText: [
+        '12px',
+        {
+          lineHeight: '16px',
+          letterSpacing: 'auto',
+          fontWeight: 400,
+        },
+      ],
+      overline: [
+        '12px',
+        {
+          lineHeight: '16px',
+          letterSpacing: '2.88px',
+          fontWeight: 500,
+          textTransform: 'uppercase',
+
+        },
+      ],
+      overlineSm: [
+        '10px',
+        {
+          lineHeight: '14px',
+          letterSpacing: '2.4px',
+          fontWeight: 500,
+          textTransform: 'uppercase',
+        },
+      ]
 		},
 
 			colors: {
-        bg: {
+        surface: {
           primary: 'hsl(var(--bg-primary) / <alpha-value>)',
           secondary: 'hsl(var(--bg-secondary) / <alpha-value>)',
         },
@@ -95,7 +213,7 @@ module.exports = {
           textTitleDisabled: 'hsl(var(--input-text-title-disabled) / <alpha-value>)',
           textTitleErrorRequired: 'hsl(var(--input-text-title-error-required) / <alpha-value>)',
         },
-        text: {
+        color: {
           title: 'hsl(var(--text-title) / <alpha-value>)',
           subtitle: 'hsl(var(--text-subtitle) / <alpha-value>)',
           body: 'hsl(var(--text-body) / <alpha-value>)',
@@ -106,76 +224,76 @@ module.exports = {
 			},
 		
 	},
-	plugins: [
-    plugin(({ addComponents, theme }) => {
-      // theme props
-      // const colors = theme('colors');
-      const fontFamily = theme('fontFamily');
-      // commons
-      const hx = {
-        // color: colors.text.main,
-        fontFamily: fontFamily.sans,
-        lineHeight: 'normal',
-        fontWeight: 500,
-      };
-      const bx = {
-        // color: colors.text.block,
-        // fontFamily: fontFamily.block,
-        lineHeight: '140%',
-        fontWeight: 400,
-      };
-      // components
-      addComponents({
-        ['h1, .h1']: {
-          ...hx,
-          fontSize: '3.875rem',
-        },
-        ['h2, .h2, .fabi']: {
-          ...hx,
-          fontSize: '3.000rem',
-        },
-        ['h3, .h3']: {
-          ...hx,
-          fontSize: '2.440rem',
-        },
-        ['h4, .h4']: {
-          ...hx,
-          fontSize: '1.950rem',
-        },
-        ['h5, .h5']: {
-          ...hx,
-          fontSize: '1.500rem',
-        },
-        ['h6, .h6']: {
-          ...hx,
-          fontSize: '1.250rem',
-        },
-        ['p, .p']: {
-          ...bx,
-          fontSize: '1.000rem',
-        },
-        ['input, .input']: {
-          ...bx,
-          fontSize: '1.000rem',
-        },
-        ['small, .small']: {
-          ...bx,
-          fontSize: '0.800rem',
-        },
-        ['span, .span']: {
-          ...bx,
-          letterSpacing: '0.1125rem',
-          textTransform: 'uppercase',
-          fontSize: '0.640rem',
-        },
-        ['a, .a']: {
-          ...bx,
-          fontSize: '1.000em',
-          cursor: 'pointer',
-          textDecoration: 'underline',
-        }
-      });
+	// plugins: [
+  //   plugin(({ addComponents, theme }) => {
+  //     // theme props
+  //     // const colors = theme('colors');
+  //     const fontFamily = theme('fontFamily');
+  //     // commons
+  //     const hx = {
+  //       // color: colors.text.main,
+  //       fontFamily: fontFamily.sans,
+  //       lineHeight: 'normal',
+  //       fontWeight: 500,
+  //     };
+  //     const bx = {
+  //       // color: colors.text.block,
+  //       // fontFamily: fontFamily.block,
+  //       lineHeight: '140%',
+  //       fontWeight: 400,
+  //     };
+  //     // components
+  //     addComponents({
+  //       ['h1, .h1secondary']: {
+  //         ...hx,
+  //         fontSize: '3.500rem',
+  //       },
+  //       ['h2, .h2, .fabi']: {
+  //         ...hx,
+  //         fontSize: '3.000rem',
+  //       },
+  //       ['h3, .h3']: {
+  //         ...hx,
+  //         fontSize: '2.440rem',
+  //       },
+  //       ['h4, .h4']: {
+  //         ...hx,
+  //         fontSize: '1.950rem',
+  //       },
+  //       ['h5, .h5']: {
+  //         ...hx,
+  //         fontSize: '1.500rem',
+  //       },
+  //       ['h6, .h6']: {
+  //         ...hx,
+  //         fontSize: '1.250rem',
+  //       },
+  //       ['p, .p']: {
+  //         ...bx,
+  //         fontSize: '1.000rem',
+  //       },
+  //       ['input, .input']: {
+  //         ...bx,
+  //         fontSize: '1.000rem',
+  //       },
+  //       ['small, .small']: {
+  //         ...bx,
+  //         fontSize: '0.800rem',
+  //       },
+  //       ['span, .span']: {
+  //         ...bx,
+  //         letterSpacing: '0.1125rem',
+  //         textTransform: 'uppercase',
+  //         fontSize: '0.640rem',
+  //       },
+  //       ['a, .a']: {
+  //         ...bx,
+  //         fontSize: '1.000em',
+  //         cursor: 'pointer',
+  //         textDecoration: 'underline',
+  //       }
+  //     });
 
-    }),
-  ],
+  //   }),
+  // ],
 }

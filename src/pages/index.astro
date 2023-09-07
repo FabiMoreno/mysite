@@ -8,30 +8,33 @@ import Footer from "../components/Footer.astro";
   <!--Componente Nav -->
   <Navbar />
 
-  <main class="flex justify-center flex-col max-w-7xl mx-auto">
-    <section class=" bg-bg-primary pt-36 flex flex-col justify-center">
-      <h1 class=" text-text-title">Hola 👋🏼 soy Fabián Sr Product Designer</h1>
-      <h3 class="">
+  <main class="flex justify-center flex-col max-w-7xl mx-auto antialiased gap-8">
+    <section class=" bg-bg pt-36 flex flex-col justify-center gap-6">
+      <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">Hola 👋🏼 soy Fabián Sr Product Designer</h1>
+      <p class="text-subtitle1 text-color-subtitle">
         Sr UX Designer con más de 10 años de experiencia desarrollando productos
         que generen un impacto positivo en las personas.
-      </h3>
-      <button type="button" class=" bg-button-bgPrimary"><span class="">Ver proyectos</span></button>
+      </p>
+    </section>
+    <section>
+      <button type="button" class="bg-button-bgPrimary"><span class="">Ver proyectos</span></button>
       <button type="button">Contáctame</button>
     </section>
+    
 
     <h2>Proyectos destacados</h2>
     <p>De proyectos inmobilidarios a Fintech</p>
 
     <article class="grid grid-cols-1 gap-8 content-start bg-bg-primary text-bg-primary">
-      <a href="/trocando/" class="">
+      <a href="/trocando/" class=" bg-card-bg ">
         <img
           src="../../src/img/previewTrocando_1x.webp"
           alt=""
           class="rounded-t-lg dark:rounded-t-3xl"
         />
-        <h2>Trocando - Pharma</h2>
+        <h2 class=" text-text-title">Trocando - Pharma</h2>
         <button> Icono</button>
-        <p>
+        <p class=" text-text-subtitle">
           Diseño MVP para plataforma de compra y venta de productos
           farmacéuticos en Argentina
         </p>
