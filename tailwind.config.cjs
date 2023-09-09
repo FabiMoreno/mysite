@@ -77,7 +77,7 @@ module.exports = {
         '18px',
         {
           lineHeight: '28px',
-          letterSpacing: 'auto',
+          letterSpacing: '0',
           fontWeight: 400,
         },
       ],
@@ -85,7 +85,7 @@ module.exports = {
         '16px',
         {
           lineHeight: '24px',
-          letterSpacing: 'auto',
+          letterSpacing: '0',
           fontWeight: 600,
         },
       ],
@@ -93,7 +93,7 @@ module.exports = {
         '14px',
         {
           lineHeight: '20px',
-          letterSpacing: 'auto',
+          letterSpacing: '0',
           fontWeight: 400,
         },
       ],
@@ -101,7 +101,7 @@ module.exports = {
         '12px',
         {
           lineHeight: '16px',
-          letterSpacing: 'auto',
+          letterSpacing: '0',
           fontWeight: 400,
         },
       ],
@@ -127,6 +127,24 @@ module.exports = {
 		},
 
 			colors: {
+        neutral: {
+          10: '#FDFDFE',
+          20: '#F8F8FA',
+          30: '#E6E4EC',
+          40: '#9B99A9',
+          50: '#666785',
+          60: '#4E4763',
+          80: '#29233B',
+          90: '#100D18',
+          100:'#000000',
+        },
+        violet: {
+          10: '#B295EF',
+          30: '#9E76EF',
+          50: '#8A59EC',
+          70: '#7044C9',
+          90: '#342856',
+        },
         surface: {
           primary: 'hsl(var(--bg-primary) / <alpha-value>)',
           secondary: 'hsl(var(--bg-secondary) / <alpha-value>)',
@@ -140,6 +158,8 @@ module.exports = {
           bgSecondaryDisabled: 'hsl(var(--button-bg-secondary-disabled) / <alpha-value>)',
           bgSecondaryHovered: 'hsl(var(--button-bg-secondary-hovered) / <alpha-value>)',
           bgSecondaryPressed: 'hsl(var(--button-bg-secondary-pressed) / <alpha-value>)',
+          bgTertiaryHovered: 'hsl(var(--button-bg-tertiary-hovered) / <alpha-value>)',
+          bgTertiaryPressed: 'hsl(var(--button-bg-tertiary-pressed) / <alpha-value>)',
          
           borderSecondary: 'hsl(var(--button-border-secondary) / <alpha-value>)',
           borderSecondaryDisabled: 'hsl(var(--button-border-secondary-disabled) / <alpha-value>)',
@@ -172,7 +192,7 @@ module.exports = {
           labelTertiarySelected: 'hsl(var(--button-label-tertiary-selected) / <alpha-value>)',
         },
         card: {
-          bg: 'hsl(var(--card-bg) / <alpha-value>)',
+          surface: 'hsl(var(--card-bg) / <alpha-value>)',
           border: 'hsl(var(--card-border) / <alpha-value>)',
           borderHovered: 'hsl(var(--card-border-hovered) / <alpha-value>)',
         },

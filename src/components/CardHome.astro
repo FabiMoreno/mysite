@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+  image: string;
+  alt: string;
+  tag1: string;
+  tag2: string;
+}
+
+const { href, title, body, image, alt, tag1, tag2 } = Astro.props;
+---
+<div class="bg-card-surface [&>a>img]:aspect-[10/6] [&>a>img]:object-cover border-solid border-[1px] border-card-border rounded-lg overflow-hidden origin-bottom hover:drop-shadow-[0px_16px_0px_rgba(112,68,201,1.00)] hover:border-card-borderHovered hover:-translate-y-4 transition-all ease-in-out delay-150">
+    <a href={href} class="bg-card-surface">
+      <img src={image} alt={alt} class="" />
+        <div class="p-8">
+          <div class="flex flex-row justify-between items-center mb-2">
+            <h2 class="text-title3 text-color-title">{title}</h2>
+            <button class="hidden md:inline">
+              <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+            </button>
+          </div>
+           <p class="text-actionText font-normal text-color-subtitle mb-4">
+            {body}
+          </p>
+          <div class="inline-flex text-overline text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
+            {tag1}
+          </div>
+          <div class="inline-flex text-overline text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
+            {tag2}
+          </div>
+          
+        </div>
+    </a>
+  </div>

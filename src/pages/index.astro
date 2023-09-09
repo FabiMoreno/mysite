@@ -2,100 +2,123 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import CardHome from "../components/CardHome.astro";
 ---
 
 <Layout title="Fabián Moreno - Product Designer">
   <!--Componente Nav -->
   <Navbar />
-
-  <main class="flex justify-center flex-col max-w-7xl mx-auto antialiased gap-8">
-    <section class=" bg-bg pt-36 flex flex-col justify-center gap-6">
-      <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">Hola 👋🏼 soy Fabián Sr Product Designer</h1>
-      <p class="text-subtitle1 text-color-subtitle">
-        Sr UX Designer con más de 10 años de experiencia desarrollando productos
-        que generen un impacto positivo en las personas.
-      </p>
-    </section>
-    <section>
-      <button type="button" class="bg-button-bgPrimary"><span class="">Ver proyectos</span></button>
-      <button type="button">Contáctame</button>
-    </section>
-    
-
-    <h2>Proyectos destacados</h2>
-    <p>De proyectos inmobilidarios a Fintech</p>
-
-    <article class="grid grid-cols-1 gap-8 content-start bg-bg-primary text-bg-primary">
-      <a href="/trocando/" class=" bg-card-bg ">
-        <img
-          src="../../src/img/previewTrocando_1x.webp"
-          alt=""
-          class="rounded-t-lg dark:rounded-t-3xl"
-        />
-        <h2 class=" text-text-title">Trocando - Pharma</h2>
-        <button> Icono</button>
-        <p class=" text-text-subtitle">
-          Diseño MVP para plataforma de compra y venta de productos
-          farmacéuticos en Argentina
+  
+  <main class="flex justify-center flex-col max-w-7xl mx-auto antialiased">
+    <div class="flex flex-col py-12 gap-y-8 px-4 md:px-16">
+      <section class="flex pt-32 flex-col justify-center gap-6">
+        <p class="text-largeMobile text-color-title lg:text-largeDesktop">
+          Hola 👋🏼 soy Fabián Sr Product Designer
         </p>
-        <div>UX LEAD</div>
-        <div>2023</div>
-      </a>
+        <h1 class="text-subtitle1 text-color-subtitle">
+          Sr UX Designer con más de 10 años de experiencia desarrollando
+          productos que generen un impacto positivo en las personas.
+        </h1>
+      </section>
+      <section class="flex flex-row gap-x-4">
 
-      <a href="/quiena-automatica/" class="">
-        <img
-          src="../../src/img/previewQuiena_1x.webp"
-          alt=""
-          class="rounded-t-lg"
-        />
-        <h2>Quiena Automática</h2>
-        <button> Icono</button>
-        <p class="bg-text-body">
-          Diseño de App nativa para el producto de inversión automático en
-          WallStreet
-        </p>
-        <div>UX LEAD</div>
-        <div>2023</div>
-      </a>
+        <!-- Revisar cuando usar el A o el button para los botones, luego si componetizar -->
+        <button
+          type="button"
+          class="bg-button-bgPrimary text-button-labelPrimary font-semibold rounded-lg hover:bg-button-bgPrimaryHovered focus:bg-button-bgPrimaryPressed focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none"
+          ><span class="">Ver proyectos</span>
+        </button>
 
-      <a href="/inmobiliaria-digital/" class="">
-        <img
-          src="../../src/img/previewInmobiliariaDigital_1x.webp"
-          alt=""
-          class="rounded-t-lg"
-        />
-        <h2>Inmobiliaria digital</h2>
-        <button> Icono</button>
-        <p>
-			Diseño de app nativa para la compra y venta de propiedades en Buenos Aires y Argentina
-        </p>
-        <div>UX LEAD</div>
-        <div>2023</div>
+        <a href="#"
+          type="button"
+          class="flex flex-row align-middle gap-2 content-center bg-button-bgSecondary text-button-labelSecondary font-semibold border-solid border-[1px] border-button-borderSecondary rounded-lg hover:bg-button-bgSecondaryHovered  focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none"
+          >Contáctame
+          <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
       </a>
+      </section>
+    </div>
 
-      <a href="/daria/" class="">
-        <img
-          src="../../src/img/previewDaria_1x.webp"
-          alt=""
-          class="rounded-t-lg"
-        />
-        <h2>D'aria Propiedades</h2>
-        <button> Icono</button>
-        <p>
-			Rediseño del sitio de  D’aria propiedades para alquilar, comprar y vender propiedades
+
+      <div class="flex flex-col items-center px-4 md:px-16 gap-y-3">
+        <h2 class="text-title2 text-color-title">Proyectos destacados</h2>
+        <p class="text-overline text-color-caption uppercase">
+          De proyectos inmobilidarios a Fintech
         </p>
-        <div>UX LEAD</div>
-        <div>2023</div>
-      </a>
+      </div>
+  
+
+    <article class="grid grid-cols-1 md:grid-cols-2 gap-8 content-start py-12 px-4 md:px-16">
+        <CardHome 
+        title= "Market place farmacéutico",
+        body="Diseño MVP para plataforma de compra y venta de productos farmacéuticos en Argentina" ,
+        href="/trocando/",
+        image="../../src/img/previewTrocando_1x.webp" ,
+        alt="Computadora portail mostrando una tabla de productos de trocando" ,
+        tag1="Ux Lead" ,
+        tag2="2023",
+        >
+      </CardHome>
+      
+      <CardHome 
+        title= "Inversiones automatizadas",
+        body="Diseño de App nativa para el producto de inversión automático en activos de WallStreet" ,
+        href="/quiena-automatica/",
+        image="../../src/img/previewQuiena_1x.webp" ,
+        alt="Una mano sostiene un celular con la app de Quiena inversiones" ,
+        tag1="Ux Lead" ,
+        tag2="2020",
+        >
+      </CardHome>
+
+      <CardHome 
+        title= "Inmobiliaria digital",
+        body="Diseño de app nativa para la compra y venta de propiedades en Buenos Aires y Argentina" ,
+        href="/inmobiliaria-digital/",
+        image="../../src/img/previewInmobiliariaDigital_1x.webp" ,
+        alt="Dos celulares que muestran un partes de la aplicación de compra venta de propiedades" ,
+        tag1="Ux Lead" ,
+        tag2="2019",
+        >
+      </CardHome>
+
+      <CardHome 
+        title= "D'aria propiedades",
+        body="Rediseño del sitio de  D’aria propiedades para alquilar, comprar y vender propiedades" ,
+        href="/daria/",
+        image="../../src/img/previewDaria_1x.webp" ,
+        alt="Vista previa de una computadora portatil y un telefeno con el home de la plataforma de Daria" ,
+        tag1="Ux Lead" ,
+        tag2="2018",
+        >
+      </CardHome>
     </article>
   </main>
-  <section>
-    <h2>
-      ¿Estas creando un proyecto, necesitas asesoría o simplemente quieres
-      enviar un saludo?
-    </h2>
-    <button type="button">Contáctame</button>
-  </section>
-
-  <Footer />
+  
+  <div class="flex bg-gradient-to-br from-violet-90 to-neutral-80">
+    <section class="flex flex-col items-start gap-8 max-w-7xl mx-auto py-12 gap-y-8 px-4 md:px-16 md:flex-row md:items-center antialiased">
+      <h2 class=" text-title2 text-neutral-20 font-normal ">
+        ¿Estas creando un proyecto, necesitas asesoría o simplemente quieres enviar
+        un saludo?
+      </h2>
+      <button
+        type="button"
+        class="flex flex-row align-middle gap-2 content-center bg-button-bgSecondary text-button-labelSecondary font-semibold border-solid border-[1px] border-button-borderSecondary rounded-lg hover:bg-button-bgSecondaryHovered  focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none"
+        >Contáctame
+        <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+        <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+      </button
+      >
+    </section>
+  </div>
 </Layout>
+
+<Footer />
