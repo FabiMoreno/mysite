@@ -1,0 +1,23 @@
+---
+import ButtonSecondary from "../components/ButtonSecondary.astro";
+interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+---
+
+<div class="flex bg-gradient-to-br from-violet-90 to-neutral-80">
+  <section
+    class="flex flex-col items-start gap-8 max-w-7xl mx-auto py-12 gap-y-8 px-4 md:px-16 md:flex-row md:items-center antialiased"
+  >
+    <h2 class="text-title2 text-neutral-20 font-normal">{content}</h2>
+
+    <ButtonSecondary href="/more-info#contact">
+      Contáctame
+      <i
+        class="bx bx-right-arrow-alt bx-sm color-button-iconSecondary"
+        slot="after"></i>
+    </ButtonSecondary>
+  </section>
+</div>

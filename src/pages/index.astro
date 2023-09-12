@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import CardHome from "../components/CardHome.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+import ButtonPrimary from "../components/ButtonPrimary.astro";
+import ButtonSecondary from "../components/ButtonSecondary.astro";
 ---
 
 <Layout title="Fabián Moreno - Product Designer">
@@ -22,31 +25,26 @@ import CardHome from "../components/CardHome.astro";
       </section>
       <section class="flex flex-row gap-x-4">
 
-        <!-- Revisar cuando usar el A o el button para los botones, luego si componetizar -->
-        <button
-          type="button"
-          class="bg-button-bgPrimary text-button-labelPrimary font-semibold rounded-lg hover:bg-button-bgPrimaryHovered focus:bg-button-bgPrimaryPressed focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none"
-          ><span class="">Ver proyectos</span>
-        </button>
+        <ButtonPrimary
+          href="/#projects"
+          >
+          Ver proyectos
+        </ButtonPrimary>
 
-        <a href="#"
-          type="button"
-          class="flex flex-row align-middle gap-2 content-center bg-button-bgSecondary text-button-labelSecondary font-semibold border-solid border-[1px] border-button-borderSecondary rounded-lg hover:bg-button-bgSecondaryHovered  focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none"
-          >Contáctame
-          <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-      </a>
+        <ButtonSecondary
+        href="/more-info#contact"
+        >
+          Contáctame
+          <i class='bx bx-right-arrow-alt bx-sm color-button-iconSecondary' slot="after"></i>
+        </ButtonSecondary>
+          
       </section>
     </div>
 
 
       <div class="flex flex-col items-center px-4 md:px-16 gap-y-3">
-        <h2 class="text-title2 text-color-title">Proyectos destacados</h2>
-        <p class="text-overline text-color-caption uppercase">
+        <h2 id="projects" class="text-title2 text-color-title">Proyectos destacados</h2>
+        <p class=" text-center text-overline text-color-caption uppercase">
           De proyectos inmobilidarios a Fintech
         </p>
       </div>
@@ -98,27 +96,10 @@ import CardHome from "../components/CardHome.astro";
       </CardHome>
     </article>
   </main>
-  
-  <div class="flex bg-gradient-to-br from-violet-90 to-neutral-80">
-    <section class="flex flex-col items-start gap-8 max-w-7xl mx-auto py-12 gap-y-8 px-4 md:px-16 md:flex-row md:items-center antialiased">
-      <h2 class=" text-title2 text-neutral-20 font-normal ">
-        ¿Estas creando un proyecto, necesitas asesoría o simplemente quieres enviar
-        un saludo?
-      </h2>
-      <button
-        type="button"
-        class="flex flex-row align-middle gap-2 content-center bg-button-bgSecondary text-button-labelSecondary font-semibold border-solid border-[1px] border-button-borderSecondary rounded-lg hover:bg-button-bgSecondaryHovered  focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none"
-        >Contáctame
-        <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-        <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-      </button
-      >
-    </section>
-  </div>
+  <CtaBanner
+    content="¿Estas creando un proyecto, necesitas asesoría o simplemente quieres enviar un saludo?"
+  >
+  </CtaBanner>
 </Layout>
 
 <Footer />

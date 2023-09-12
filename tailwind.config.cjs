@@ -73,7 +73,7 @@ module.exports = {
           fontWeight: 600,
         },
       ],
-      bodyText: [
+      body: [
         '18px',
         {
           lineHeight: '28px',
@@ -81,7 +81,7 @@ module.exports = {
           fontWeight: 400,
         },
       ],
-      actionText: [
+      action: [
         '16px',
         {
           lineHeight: '24px',
@@ -89,7 +89,7 @@ module.exports = {
           fontWeight: 600,
         },
       ],
-      bodyTextSm: [
+      bodySm: [
         '14px',
         {
           lineHeight: '20px',
