@@ -2,72 +2,78 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Quote from "../components/Quote.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 ---
 
 <Layout title="Fabián Moreno - Product Designer - Trocando Pharma">
   <!--Componente Nav -->
   <Navbar />
 
-  <section class="flex justify-center flex-col max-w-4xl mx-auto pt-36">
-    <h1>Trocando - Pharma</h1>
+
+  <section class="flex flex-col  justify-center max-w-7xl mx-auto pt-36 px-4 py-8 md:px-16">
+    <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">Trocando - Pharma</h1>
 
     <ul
-      class="flex items-center gap-8 [&>li]:flex [&>li]:flex-col [&>li]:items-start"
+      class="flex pt-16 gap-14 [&>li]:flex [&>li]:flex-col [&>li]:items-start"
     >
       <li>
-        <h4>Cliente</h4>
-        <p>Trocando</p>
+        <p class="text-overline text-color-caption uppercase">Cliente</p>
+        <p class="text-subtitle1 text-color-title">Trocando</p>
       </li>
 
       <li>
-        <h4>Rol</h4>
-        <p>Lead product designer</p>
+        <p class="text-overline text-color-caption uppercase">Rol</p>
+        <p class="text-subtitle1 text-color-title">Lead product designer</p>
       </li>
 
       <li>
-        <h4>Plazo</h4>
-        <p>2 meses</p>
+        <p class="text-overline text-color-caption uppercase">Plazo</p>
+        <p class="text-subtitle1 text-color-title">2 meses</p>
       </li>
 
       <li>
-        <h4>Link</h4>
-        <p>view Website</p>
+        <p class="text-overline text-color-caption uppercase">Link</p>
+        <p class="text-subtitle1 text-color-title">View Website</p>
       </li>
     </ul>
   </section>
 
-  <div>
-    <img src="../../src/img/previewTrocando_1x.webp" alt="" class="" />
-  </div>
+  <img src="../../src/img/previewTrocando_1x.webp" class="aspect-[10/6] object-cover md:aspect-auto"  alt="Computadora portail mostrando una tabla de productos de trocando"  />
 
-  <main class="flex justify-center flex-col max-w-4xl mx-auto">
-    <h4>
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto px-4 pt-12 md:px-16">
+    <h4 class="text-subtitle1 text-color-title font-normal">
       Para mediados de Mayo de 2023, inicié la gestión y diseño del MVP para una
       nueva plataforma que propone una solución para optimizar la gestión y
       comercialización de medicamentos, insumos, descartables, dispositivos
       médicos, equipamientos y accesorios.
     </h4>
 
-    <section>
-      <h2>Descubrir y empatizar</h2>
-      <h4>Entendiendo el negocio</h4>
-      <img src="../../src/img/trocando01_1x.webp" alt="" class="rounded-lg" />
-      <p>
-        Iniciamos desde cero, entendiendo el negocio, la propuesta de valor y el
-        scope del proyecto. Para esto realizamos diferentes reuniones y
-        workshops para poner en común las definiciones, usuarios y
-        funcionalidades core para todo el equipo. Con esto, empezamos a bocetar
-        los flujos de alto nivel necesarios para las funcionalidades y las
-        lógicas propias del negocio.
-      </p>
+    <section class="flex flex-col pt-12 gap-6">
+      <div> 
+        <h2 class="text-title2 text-color-title">Descubrir y empatizar</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Entendiendo el negocio</h3>
+      </div>
+        <img src="../../src/img/trocando01_1x.webp" alt="" class="rounded-lg" />
+        <p class="text-body text-color-body">
+          Iniciamos desde cero, entendiendo el negocio, la propuesta de valor y el
+          scope del proyecto. Para esto realizamos diferentes reuniones y
+          workshops para poner en común las definiciones, usuarios y
+          funcionalidades core para todo el equipo. Con esto, empezamos a bocetar
+          los flujos de alto nivel necesarios para las funcionalidades y las
+          lógicas propias del negocio.
+        </p>
     </section>
 
-    <section>
-      <h2>Definir e idear</h2>
-      <h4>Primeros insights, ideas y soluciones</h4>
+    <section class="flex flex-col pt-12 gap-6">
+      <div>
+        <h2 class="text-title2 text-color-title">Definir e idear</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Primeros insights, ideas y soluciones</h3>
+      </div>
 
       <img src="../../src/img/trocando02_1x.webp" alt="" class="rounded-lg" />
-      <p>
+      <p class="text-body text-color-body">
         El desafío más importante del proyecto fue el tiempo. Por esto, junto
         con el dueño del producto, decidimos realizar un proceso de research
         rápido y enfocarnos en tener una versión funcional lo antes posible. Fue
@@ -79,29 +85,26 @@ import Footer from "../components/Footer.astro";
   </main>
 
   <!-- Sección completa para Quote -->
-  <blockquote
-    class="flex flex-col max-w-full bg-gradient-to-r from-sky-500 to-indigo-500"
+  <Quote
+  quote='"Even the best designers produce successful products only if their design solve the right problems. A wonderful interface to the wrong features will fail"', 
+  author="Jakob Nielsen",
   >
-    <h3 class="max-w-4xl items-center mx-auto">
-      “Even the best designers produce successful products only if their design
-      solve the right problems. A wonderful interface to the wrong features will
-      fail”
-    </h3>
-    <p class="max-w-4xl items-center mx-auto">Jakob Nielsen</p>
-  </blockquote>
+  </Quote>
   <!-- termina Quote -->
 
-  <main class="flex justify-center flex-col max-w-4xl mx-auto">
-    <section>
-      <h2>Prototipar e iterar</h2>
-      <h4>Componentes y flujos de navegación</h4>
+  <main class="flex justify-center flex-col max-w-4xl mx-auto pb-16 px-4 md:px-16 gap-6">
+   
+      <div> 
+        <h2 class="text-title2 text-color-title">Prototipar e iterar</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Componentes y flujos de navegación</h3>
+      </div>
 
       <div
         class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
       >
         <img src="../../src/img/trocando03_1x.webp" alt="" class="rounded-lg" />
       </div>
-      <p>
+      <p class="text-body text-color-body">
         Diseñe los componentes necesarios para la primera versión de nuestro
         Design System. Cree el Handoff con toda la documentación detallada para
         el equipo de desarrollo y validamos la factibilidad técnica del MVP con
@@ -114,14 +117,13 @@ import Footer from "../components/Footer.astro";
       >
         <img src="../../src/img/trocando04_1x.webp" alt="" class="rounded-lg" />
       </div>
-      <p>
+      <p class="text-body text-color-body">
         Conforme fuimos avanzando sobre pruebas de calidad media, se hacía
         evidente la necesidad de afinar una propuesta de rediseño de marca. Por
         esto, organizamos un Brand Sprint para poner en común el imaginario y la
         definición de Quiena como marca. Esto nos ayudo a poner en común y
         decidir una primera versión del Brand Guidelines de Quiena.
       </p>
-    </section>
   </main>
 
     <!-- Full width image -->
@@ -130,9 +132,13 @@ import Footer from "../components/Footer.astro";
     </div>
     <!-- Ends full width image -->
 
-    <section class="flex justify-center flex-col max-w-4xl mx-auto">
-      <h2>Resultados</h2>
-      <p>
+    <section class="flex justify-center flex-col max-w-4xl py-16 mx-auto">
+      
+      <div> 
+        <h2 class="text-title2 text-color-title">Resultados</h2>
+      </div>
+      
+      <p class="text-body text-color-body">
         Logramos tener una versión de MVP de la plataforma en en el tiempo
         propuesto. Además de brindar asesoría para mejorar la experiencia de
         usuario y acompañar el proceso de ajuste al mercado del producto.
@@ -140,15 +146,14 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <!-- Full widht CTA  -->
-    <div class="max-w-full bg-gradient-to-r from-[#29233B] to-[#342856]">
-      <div class="flex flex-row max-w-4xl items-center mx-auto">
-        <h3 class="">
-          Si te interesa saber más sobre este y otros proyectos puedes
-          contactarme.
-        </h3>
-        <button>Contáctame</button>
-      </div>
-    </div>
+
+    <CtaBanner
+    content="Si te interesa saber más sobre este y otros proyectos puedes contactarme."
+    >
+    
+    </CtaBanner>
+
+
     <!-- ends Quote -->
 
     <Footer />
