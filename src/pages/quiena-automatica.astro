@@ -2,33 +2,36 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Quote from "../components/Quote.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 ---
 
 <Layout title="Fabián Moreno - Product Designer - Quiena Automatica">
   <!--Componente Nav -->
   <Navbar />
+
   <section class="flex flex-col  justify-center md:max-w-7xl mx-auto pt-36 px-4 py-8 md:px-16">
     <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">Inversiones automáticas</h1>
 
     <ul
-      class="flex flex-wrap pt-16 gap-x-10 gap-y-4 md:gap-14 [&>li]:flex [&>li]:flex-col [&>li]:items-start"
+      class="grid grid-cols-3 [&>li]:items-start pt-16 gap-x-0 gap-y-4 sm:gap-14 md:[&>li]:flex sm:flex sm:flex-wrap sm:[&>li]:flex-col "
     >
-      <li>
+      <li class=" col-start-1 col-span-1">
         <p class=" text-overlineSm  md:text-overline  text-color-caption uppercase">Cliente</p>
         <p class=" text-action font-medium md:text-subtitle1 text-color-title">Quiena inversiones</p>
       </li>
 
-      <li>
+      <li class=" col-start-2 col-span-1">
         <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">Rol</p>
         <p class=" text-action font-medium md:text-subtitle1 text-color-title">Lead product designer</p>
       </li>
 
-      <li>
+      <li class=" col-start-1 col-span-1">
         <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">Plazo</p>
         <p class=" text-action font-medium md:text-subtitle1 text-color-title">5 meses</p>
       </li>
 
-      <li>
+      <li class=" col-start-2 col-span-1">
         <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">Link</p>
         <p class=" text-action font-medium md:text-subtitle1 text-color-title">View Website</p>
       </li>
@@ -36,10 +39,10 @@ import Footer from "../components/Footer.astro";
   </section>
 
   <div>
-    <img src="../../src/img/previewQuiena_1x.webp" class="aspect-[10/6] object-cover md:aspect-auto" alt="Diseño de App nativa para el producto de inversión automático en activos de WallStreet" />
+    <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719619/investment-auto-preview.webp" class="aspect-[10/6] object-cover md:aspect-auto" alt="Diseño de App nativa para el producto de inversión automático en activos de WallStreet" />
   </div>
 
-  <main class="flex justify-center flex-col max-w-4xl mx-auto px-4 pt-12 md:px-16">
+  <main class="flex flex-col justify-center  max-w-4xl mx-auto px-4 pt-12 md:px-16">
     <h4 class="text-subtitle1 text-color-title font-normal">
       Para principios del 2020 Quiena Inversiones nos contacta para diseñar y
       desarrollar la primera versión su aplicación nativa. Nos sumamos a un
@@ -52,7 +55,7 @@ import Footer from "../components/Footer.astro";
         <h2 class="text-title2 text-color-title">Detectando los principales desafios</h2>
         <h3 class="text-overlineSm text-color-caption uppercase">Entendiendo el problema</h3>
       </div>
-        <img src="../../src/img/Quiena01_1x.webp" alt="" class="rounded-lg" />
+        <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-01.webp" alt="" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
         <p class="text-body text-color-body">
           Nos encontramos con el desafío de diseñar, desarrollar y lanzar la
           primera versión de la App para IOS y Android. Para esto, además de
@@ -64,77 +67,25 @@ import Footer from "../components/Footer.astro";
 
     <section class="flex flex-col pt-12 gap-6">
       <div>
-        <h2 class="text-title2 text-color-title">Definir e idear</h2>
-        <h3 class="text-overlineSm text-color-caption uppercase">Primeros insights, ideas y soluciones</h3>
+        <h2 class="text-title2 text-color-title">¡A trabajar!</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Poniendo expectativas en común</h3>
       </div>
 
-      <img src="../../src/img/trocando02_1x.webp" alt="" class="rounded-lg" />
+      <img src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-03.webp" alt="Propuesta de identidad de marca para Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
       <p class="text-body text-color-body">
-        El desafío más importante del proyecto fue el tiempo. Por esto, junto
-        con el dueño del producto, decidimos realizar un proceso de research
-        rápido y enfocarnos en tener una versión funcional lo antes posible. Fue
-        necesario diseñar los elementos básicos de marca como la paleta de
-        color, tipografía, logotipo y aplicaciones básicas. Esto también fue
-        importante para diseñar los wireframes de alta calidad y flujos finales.
-      </p>
-    </section>
-  </main>
-
-
-
-
-  <main class="flex justify-center flex-col max-w-4xl mx-auto">
-    <h4>
-      Para principios del 2020 Quiena Inversiones nos contacta para diseñar y
-      desarrollar la primera versión su aplicación nativa. Nos sumamos a un
-      equipo de nueve personas con la visión de simplificar y democratizar las
-      inversiones en activos de WallStreet.
-    </h4>
-
-    <section>
-      <h2>Detectando los principales desafios</h2>
-      <h4>Entendiendo el problema</h4>
-      <img src="../../src/img/Quiena01_1x.webp" alt="" class="rounded-lg" />
-      <p>
-        Nos encontramos con el desafío de diseñar, desarrollar y lanzar la
-        primera versión de la App para IOS y Android. Para esto, además de
-        mejorar la experiencia de la plataforma, tendríamos que proponer un
-        nuevo estilo visual y de UI para aplicar luego en futuros productos y
-        puntos de contacto de la marca.
+        Organizamos diferentes workshops junto con los stakeholders y definimos juntos el scope del proyecto. Recopilamos datos cuantitativos y cualitativos a través de analítica, encuestas y entrevistas. Con esto validamos la visión de negocio y detectamos diferentes puntos de dolor sobre la plataforma actual. Con este primer análisis empezamos a formular las primeras soluciones en papel que fuimos iterando y probando con algunos usuarios del producto.
       </p>
     </section>
 
-    <section>
-      <h2>¡A trabajar!</h2>
-      <h4>Poniendo expectativas en común</h4>
-
-      <div
-        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
-      >
-        <img src="../../src/img/Quiena02_1x.webp" alt="" class="rounded-lg" />
-        <img src="../../src/img/Quiena03_1x.webp" alt="" class="rounded-lg" />
+    
+    <section class="flex flex-col pt-12 gap-6">
+      <div>
+        <h2 class="text-title2 text-color-title">Empatizar y definir</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Conociendo a los usuarios y sus problemas</h3>
       </div>
-      <p>
-        Organizamos diferentes workshops junto con los stakeholders y definimos
-        juntos el scope del proyecto. Recopilamos datos cuantitativos y
-        cualitativos a través de analítica, encuestas y entrevistas. Con esto
-        validamos la visión de negocio y detectamos diferentes puntos de dolor
-        sobre la plataforma actual. Con este primer analisis empezamos a
-        formular las primeras soluciones en papel que fuimos iterando y probando
-        con algunos usuarios del producto.
-      </p>
-    </section>
-
-    <section>
-      <h2>Empatizar y definir</h2>
-      <h4>conociendo a los usuarios y sus problemas</h4>
-      <div
-        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
-      >
-        <img src="../../src/img/Quiena04_1x.webp" alt="" class="rounded-lg" />
-        <img src="../../src/img/Quiena05_1x.webp" alt="" class="rounded-lg" />
-      </div>
-      <p>
+  
+      <img src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-05.webp" alt="Propuesta de identidad de marca para Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+      <p class="text-body text-color-body">
         Nos enfocamos en el producto de Quiena Automática. Por lo tanto,
         realizamos encuestas y entrevistas con personas usuarias para validar
         nuestras primeras hipótesis. Fuimos iterando con pruebas de concepto y
@@ -147,93 +98,83 @@ import Footer from "../components/Footer.astro";
   </main>
 
   <!-- Sección completa para Quote -->
-  <blockquote
-    class="flex flex-col max-w-full bg-gradient-to-r from-sky-500 to-indigo-500"
+  <Quote
+  quote='“Design thinking is a human-centered approach to innovation that draws from the designer&apos;s toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success”', 
+  author="Tim Brown, Executive Chair of IDEO",
   >
-    <h3 class="max-w-4xl items-center mx-auto">
-      “Design thinking is a human-centered approach to innovation that draws
-      from the designer's toolkit to integrate the needs of people, the
-      possibilities of technology, and the requirements for business success”
-    </h3>
-    <p class="max-w-4xl items-center mx-auto">
-      Tim Brown, Executive Chair of IDEO
-    </p>
-  </blockquote>
+  </Quote>
   <!-- termina Quote -->
 
-  <main class="flex justify-center flex-col max-w-4xl mx-auto">
-    <section>
-      <h2>Idear</h2>
-      <h4>Explorando soluciones</h4>
-      <div
-        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
-      >
-        <img src="../../src/img/Quiena06_1x.webp" alt="" class="rounded-lg" />
+  <main class="flex justify-center flex-col max-w-4xl mx-auto pb-16 px-4 md:px-16 gap-6">
+   
+    <section class="flex flex-col pt-12 gap-6">
+      <div> 
+        <h2 class="text-title2 text-color-title">Idear</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Explorando soluciones</h3>
       </div>
-      <p>
+        <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-06.webp" alt="" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+      <p class="text-body text-color-body">
         Conforme fuimos avanzando sobre pruebas de calidad media, se hacía
         evidente la necesidad de afinar una propuesta de rediseño de marca. Por
         esto, organizamos un Brand Sprint para poner en común el imaginario y la
         definición de Quiena como marca. Esto nos ayudo a poner en común y
         decidir una primera versión del Brand Guidelines de Quiena.
       </p>
+
       <div
-        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
+        class="flex flex-col gap-4"
       >
-        <img src="../../src/img/Quiena07_1x.webp" alt="" class="rounded-lg" />
+        <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-07.webp" alt="" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
       </div>
-      <p>
+      <p class="text-body text-color-body">
         En base a este documento iteramos sobre los diseños de calidad media y
         fuimos iterando hasta tener nuestra versión definitiva de UI,
         componentes, wireframes, flujos e interacciones.
       </p>
     </section>
 
-    <section>
-      <h2>Prototipar e iterar</h2>
-      <h4>Diseñar, probar y seguir iterando</h4>
-      <div
-        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
-      >
-        <img src="../../src/img/Quiena08_1x.webp" alt="" class="rounded-lg" />
+    <section class="flex flex-col pt-12 gap-6">
+      <div>
+        <h2 class="text-title2 text-color-title">Prototipar e iterar</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Diseñar, probar y seguir iterando</h3>
       </div>
-      <p>
-        Consolidamos nuestro primer design system, creamos prototipos e iteramos
-        sobre los detalles finales. Contactamos a usuarios reales y testeamos
-        antes y durante la puesta en producción de la versión Alfa en Android y
-        IOS para detectar y corregir errores.
+  
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-08.webp" alt="Propuesta de identidad de marca para Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+      <p class="text-body text-color-body">
+        Consolidamos nuestro primer design system, creamos prototipos e iteramos sobre los detalles finales. Contactamos a usuarios reales y testeamos antes y durante la puesta en producción de la versión Alfa en Android y IOS para detectar y corregir errores.
       </p>
     </section>
   </main>
 
-  <!-- Full width image -->
-  <div>
-    <img src="../../src/img/quiena-results_1x.webp" alt="" class="" />
-  </div>
-  <!-- Ends full width image -->
-
-  <section class="flex justify-center flex-col max-w-4xl mx-auto">
-    <h2>Impacto</h2>
-    <p>
-      Tras implementar la versión inicial de la aplicación, conseguimos más de
-      2000 instalaciones, lo que representa la totalidad de los usuarios del
-      producto de Automática. Asi mismo, experimentamos un incremento de
-      alrededor del 60% en las sesiones mensuales, gracias a una mejor
-      experiencia móvil para nuestros usuarios.
-    </p>
-  </section>
-
-  <!-- Full widht CTA  -->
-  <div class="max-w-full bg-gradient-to-r from-[#29233B] to-[#342856]">
-    <div class="flex flex-row max-w-4xl items-center mx-auto">
-      <h3 class="">
-        Si te interesa saber más sobre este y otros proyectos puedes
-        contactarme.
-      </h3>
-      <button>Contáctame</button>
+    <!-- Full width image -->
+    <div>
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-results.webp" alt="" class="aspect-[10/6] object-cover md:aspect-auto" />
     </div>
-  </div>
-  <!-- ends Quote -->
+    <!-- Ends full width image -->
+
+
+
+    <section class="flex justify-center flex-col max-w-4xl mx-auto py-16 px-4 md:px-16 gap-6">
+      
+      <div> 
+        <h2 class="text-title2 text-color-title">Impacto</h2>
+      </div>
+      
+      <p class="text-body text-color-body">
+        Tras implementar la versión inicial de la aplicación, conseguimos más de
+        2000 instalaciones, lo que representa la totalidad de los usuarios del
+        producto de Automática. Asi mismo, experimentamos un incremento de
+        alrededor del 60% en las sesiones mensuales, gracias a una mejor
+        experiencia móvil para nuestros usuarios.
+      </p>
+    </section>
+
+   <!-- Full Banner CTA  -->
+   <CtaBanner
+   content="Si te interesa saber más sobre este y otros proyectos puedes contactarme."
+   >
+   </CtaBanner>
+   <!-- ends Banner -->
 
   <Footer />
 </Layout>
