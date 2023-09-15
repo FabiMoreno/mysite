@@ -2,80 +2,74 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Quote from "../components/Quote.astro";
+import CtaBanner from "../components/CtaBanner.astro";
 ---
 
 <Layout title="Fabián Moreno - Product Designer - Inmobiliaria digital">
   <!--Componente Nav -->
   <Navbar />
 
-  <section class="flex justify-center flex-col max-w-4xl mx-auto pt-36">
-    <h1>Inmobiliaria Digital</h1>
+  <section class="flex flex-col  justify-center md:max-w-7xl mx-auto pt-36 px-4 py-8 md:px-16">
+    <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">Inmobiliaria Digital</h1>
 
     <ul
-      class="flex items-center gap-8 [&>li]:flex [&>li]:flex-col [&>li]:items-start"
+      class="grid grid-cols-2 pr-8 [&>li]:items-start pt-10 gap-x-0 gap-y-4 sm:gap-14 md:[&>li]:flex sm:flex sm:flex-wrap sm:[&>li]:flex-col "
     >
-      <li>
-        <h4>Cliente</h4>
-        <p>Privado</p>
+      <li class=" col-start-1 col-span-1">
+        <p class=" text-overlineSm  md:text-overline  text-color-caption uppercase">Cliente</p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">Privado</p>
       </li>
 
-      <li>
-        <h4>Rol</h4>
-        <p>Lead Product designer</p>
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">Rol</p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">Lead product designer</p>
       </li>
 
-      <li>
-        <h4>Plazo</h4>
-        <p>6 meses</p>
+      <li class=" col-start-1 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">Plazo</p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">6 meses</p>
       </li>
     </ul>
   </section>
 
-  <div>
-    <img
-      src="../../src/img/previewInmobiliariaDigital_1x.webp"
-      alt=""
-      class=""
-    />
-  </div>
+  <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719618/real-state-preview.webp" class="aspect-[10/6] object-cover md:aspect-auto"  alt="Computadora portail mostrando una tabla de productos de trocando"  />
 
-  <main class="flex justify-center flex-col max-w-4xl mx-auto">
-    <h4>
+
+  <main class="flex flex-col justify-center  max-w-4xl mx-auto px-4 pt-12 md:px-16">
+    <h4 class="text-subtitle1 text-color-title font-normal">
       El 2019 empezó con un gran desafío, me contactaron para investigar y
       colaborar en una plataforma para comprar y vender propiedades. Un proyecto
       desde cero con el reto de llevar el proceso de investigación, ideación,
       definición y diseño.
     </h4>
 
-    <section>
-      <h2>Discovery</h2>
-      <h4>Entendiendo el negocio</h4>
-      <img
-        src="../../src/img/inmobiliaria01_1x.webp"
-        alt=""
-        class="rounded-lg"
-      />
-      <p>
-        Empezamos por entender, investigar y definir en equipo la primera
-        versión MVP del producto. Al partir de una industria con un mercado muy
-        desarrollado, uno de los primeros procesos que realizamos fue un
-        Costumer Journey mapping del proceso convencional para detectar los
-        principales puntos de fricción. Así, fuimos descubriendo y definiendo
-        juntos las hipótesis de trabajo y propuesta de valor del producto a
-        través de herramientas como benchmarks, entrevistas, encuestas etc.
-      </p>
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">Discovery</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Entendiendo el negocio</h3>
+      </div>
+        <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-01.webp" alt="Preview de los  diagramas de flujo de Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+        <p class="text-body text-color-body">
+          Empezamos por entender, investigar y definir en equipo la primera
+          versión MVP del producto. Al partir de una industria con un mercado muy
+          desarrollado, uno de los primeros procesos que realizamos fue un
+          Costumer Journey mapping del proceso convencional para detectar los
+          principales puntos de fricción. Así, fuimos descubriendo y definiendo
+          juntos las hipótesis de trabajo y propuesta de valor del producto a
+          través de herramientas como benchmarks, entrevistas, encuestas etc.
+        </p>
     </section>
 
-    <section>
-      <h2>Empatizar y definir</h2>
-      <h4>Poniendo expectativas en común</h4>
 
-      <img
-        src="../../src/img/inmobiliaria02_1x.webp"
-        alt=""
-        class="rounded-lg"
-      />
-      <p>
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">Empatizar y definir</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Poniendo expectativas en común</h3>
+      </div>
+
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-02.webp" alt="Propuesta de identidad de marca para Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+      <p class="text-body text-color-body">
         Agrupamos todas las funcionalidades en diferentes categorías, luego
         puntuamos cada una en aspectos como costo de desarrollo, impacto en los
         usuarios, diferencial en el mercado, rentabilidad y costo de
@@ -90,78 +84,54 @@ import Footer from "../components/Footer.astro";
         workshops.
       </p>
       <div
-        class="flex flex-col [&>img]:aspect-square [&>img]:object-cover gap-4"
-      >
-        <img
-          src="../../src/img/inmobiliaria03_1x.webp"
-          alt=""
-          class="rounded-lg"
-        />
-        <img
-          src="../../src/img/inmobiliaria04_1x.webp"
-          alt=""
-          class="rounded-lg"
-        />
-      </div>
-      <p>
-        Con todo lo aprendido de nuestros usuarios fuimos ajustando la
-        arquitectura de producto y avanzando sobre el flujo y navegación de los
-        usuarios. Recopilamos data cualitativa a través de las entrevistas,
-        detectando patrones, casos de uso y fricciones comunes. Esta información
-        fue clave para confeccionar encuestas más asertivas para cuantificar,
-        medir y validar nuestros aprendizajes.
-      </p>
+      class="flex flex-col gap-4"
+    >
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-03.webp" alt="" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+    </div>
+    <p class="text-body text-color-body">
+      Con todo lo aprendido de nuestros usuarios fuimos ajustando la
+      arquitectura de producto y avanzando sobre el flujo y navegación de los
+      usuarios. Recopilamos data cualitativa a través de las entrevistas,
+      detectando patrones, casos de uso y fricciones comunes. Esta información
+      fue clave para confeccionar encuestas más asertivas para cuantificar,
+      medir y validar nuestros aprendizajes.
+    </p>
     </section>
   </main>
 
   <!-- Sección completa para Quote -->
-  <blockquote
-    class="flex flex-col max-w-full bg-gradient-to-r from-sky-500 to-indigo-500"
+  <Quote
+  quote=" &quot;Design is not just what it looks like,  design is how it works&quot; ", 
+  author="Steve Jobs",
   >
-    <h3 class="max-w-4xl items-center mx-auto">
-      “Design is not just what it looks like, design is how it works”
-    </h3>
-    <p class="max-w-4xl items-center mx-auto">Steve Jobs</p>
-  </blockquote>
+  </Quote>
   <!-- termina Quote -->
 
-  <main class="flex justify-center flex-col max-w-4xl mx-auto">
-    <section>
-      <h2>Explorando posibles soluciones</h2>
-      <h4>Convirtiendo los aprendizajes en propuestas</h4>
-
-      <div
-        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
-      >
-        <img
-          src="../../src/img/inmobiliaria05_1x.webp"
-          alt=""
-          class="rounded-lg"
-        />
+  <main class="flex flex-col justify-center  max-w-4xl mx-auto pb-16 px-4 md:px-16">
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">Explorando posibles soluciones</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Convirtiendo los aprendizajes en propuestas</h3>
       </div>
-      <p>
-        Diseñamos los flujos de los usuarios y las primeras pantallas en baja
-        para empezar plantear propuestas de interfaz y navegación. Muchas de
-        estos prototipos iniciales los compartimos con algunos usuarios en
-        entrevistas y nos ayudaron a seguir iterando sobre el contenido,
-        lenguaje y la navegación de los mismos.
-      </p>
+        <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-05.webp" alt="Preview de los  diagramas de flujo de Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+        <p class="text-body text-color-body">
+          Diseñamos los flujos de los usuarios y las primeras pantallas en baja
+          para empezar plantear propuestas de interfaz y navegación. Muchas de
+          estos prototipos iniciales los compartimos con algunos usuarios en
+          entrevistas y nos ayudaron a seguir iterando sobre el contenido,
+          lenguaje y la navegación de los mismos.
+        </p>
     </section>
 
-    <section>
-      <h2>Iterando y ajustando detalles</h2>
-      <h4>De lo general a lo especifico</h4>
 
-      <div
-        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
-      >
-        <img
-          src="../../src/img/inmobiliaria06_1x.webp"
-          alt=""
-          class="rounded-lg"
-        />
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">Iterando y ajustando detalles</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">De lo general a lo especifico</h3>
       </div>
-      <p>
+
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-06.webp" alt="Propuesta de identidad de marca para Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+      <p class="text-body text-color-body">
         Diseñamos un estilo visual simple y funcional, trabajamos para crear una
         interfaz conversacional y fuimos afinando cada detalle. Determinamos los
         datos básicos de creación de usuarios, de publicación y planteamos una
@@ -171,20 +141,14 @@ import Footer from "../components/Footer.astro";
       </p>
     </section>
 
-    <section>
-      <h2>Design system y Handoff</h2>
-      <h4>Documentación para desarrollar y salir al mercado</h4>
-
-      <div
-        class="flex flex-col [&>img]:aspect-video [&>img]:object-cover gap-4"
-      >
-        <img
-          src="../../src/img/inmobiliaria07_1x.webp"
-          alt=""
-          class="rounded-lg"
-        />
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">Design system y Handoff</h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">Nuestro source of truth</h3>
       </div>
-      <p>
+
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-07.webp" alt="Propuesta de identidad de marca para Trocando" class="aspect-[5/4] rounded-lg object-cover md:aspect-video" />
+      <p class="text-body text-color-body">
         Finalmente diseñamos cada uno de los componentes y estados para nuestro
         design system, documentando todos los flujos y wireframes de alta
         calidad para el equipo de desarrollo.
@@ -192,15 +156,21 @@ import Footer from "../components/Footer.astro";
     </section>
   </main>
 
-  <!-- Full width image -->
-  <div>
-    <img src="../../src/img/inmobiliaria-results_1x.webp" alt="" class="" />
-  </div>
-  <!-- Ends full width image -->
 
-  <section class="flex justify-center flex-col max-w-4xl mx-auto">
-    <h2>Resultados</h2>
-    <p>
+
+    <!-- Full width image -->
+    <div>
+      <img loading="lazy" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719615/real-state-results.webp" alt="" class="aspect-[10/6] object-cover md:aspect-auto" />
+    </div>
+    <!-- Ends full width image -->
+
+  <section class="flex justify-center flex-col max-w-4xl mx-auto py-16 px-4 md:px-16 gap-6">
+      
+    <div> 
+      <h2 class="text-title2 text-color-title">Resultados</h2>
+    </div>
+    
+    <p class="text-body text-color-body">
       Desde el principio, nuestro objetivo principal fue comprender a fondo las
       necesidades y deseos de nuestros usuarios, y para lograrlo, nos sumergimos
       en un proceso de investigación de usuario minucioso, recopilando datos y
@@ -216,17 +186,12 @@ import Footer from "../components/Footer.astro";
     </p>
   </section>
 
-  <!-- Full widht CTA  -->
-  <div class="max-w-full bg-gradient-to-r from-[#29233B] to-[#342856]">
-    <div class="flex flex-row max-w-4xl items-center mx-auto">
-      <h3 class="">
-        Si te interesa saber más sobre este y otros proyectos puedes
-        contactarme.
-      </h3>
-      <button>Contáctame</button>
-    </div>
-  </div>
-  <!-- ends Quote -->
+  <!-- Full Banner CTA  -->
+  <CtaBanner
+  content="Si te interesa saber más sobre este y otros proyectos puedes contactarme."
+  >
+  </CtaBanner>
+  <!-- ends Banner -->
 
   <Footer />
 </Layout>
