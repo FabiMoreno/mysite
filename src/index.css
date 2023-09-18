@@ -13,6 +13,11 @@
        font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
 @layer base {
   :root {
     /* primitive colors */

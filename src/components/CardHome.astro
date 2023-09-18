@@ -12,26 +12,29 @@ interface Props {
 
 const { href, title, body, image, alt, tag1, tag2 } = Astro.props;
 ---
-<div class="bg-card-surface [&>a>img]:aspect-[10/6] [&>a>img]:object-cover border-solid border-[1px] border-card-border rounded-lg overflow-hidden origin-bottom hover:drop-shadow-[0px_16px_0px_rgba(112,68,201,1.00)] hover:border-card-borderHovered hover:-translate-y-4 transition-all ease-in-out delay-150">
+<div class="bg-card-surface [&>a>img]:aspect-[10/6] [&>a>img]:object-cover border-solid border-[1px] border-card-border rounded-lg overflow-hidden origin-bottom hover:drop-shadow-[0px_16px_0px_rgba(112,68,201,1.00)] hover:border-card-borderHovered [&>a>div>div>h2]:hover:text-violet-50 hover:-translate-y-4 transition-all ease-in-out delay-150">
     <a href={href} class="bg-card-surface">
       <img src={image} alt={alt} class="" />
         <div class="p-6 md:p-8">
           <div class="flex flex-row justify-between items-center mb-2">
             <h2 class="text-title3 text-color-title">{title}</h2>
             <button class="hidden md:inline">
-              <i class='bx bx-right-arrow-alt bx-sm color-button-iconSecondary bx-fade-left-hover'></i>
+              <i class='bx bx-right-arrow-alt bx-sm text-button-iconSecondary bx-fade-left-hover'></i>
             </button>
           </div>
-           <p class="text-actionText font-normal text-color-subtitle mb-4">
+          <p class="text-actionText font-normal text-color-subtitle mb-4">
             {body}
           </p>
-          <div class="inline-flex text-overline text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
-            {tag1}
-          </div>
-          <div class="inline-flex text-overline text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
-            {tag2}
+          <div class="flex gap-2">
+            
+            <div class="inline-flex text-overline text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
+              {tag1}
+            </div>
+            <div class="inline-flex text-overline text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
+              {tag2}
+            </div>
           </div>
           
         </div>
     </a>
-  </div>
+</div>

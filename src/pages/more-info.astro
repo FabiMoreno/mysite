@@ -8,8 +8,8 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
 
 <Layout title="Más info - Fabián Moreno - Product Designer">
   <Navbar />
-  <main class="flex flex-col pt-36 justify-center max-w-7xl mx-auto gap-12">
-    <section class="flex flex-col px-4 py-8 md:px-16 gap-10"> 
+  <main class="flex flex-col justify-center max-w-7xl mx-auto">
+    <section class="flex flex-col px-4 pt-32 pb-12 md:pt-40 md:px-16 gap-10"> 
       <h1
         class="flex flex-col text-largeMobile text-color-title lg:text-largeDesktop"
       >
@@ -53,17 +53,16 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
       </div>
     </section>
 
-    <section class="flex flex-col px-4 py-8 md:px-16">
-      <h2 id="contact" class="text-title2 text-color-title">Contacto</h2>
-      <p class="text-body text-color-body">
-        ¿Tienes un proyecto en mente o simplemente quieres enviar un saludo o
-        hacer alguna pregunta?
-      </p>
+    <section class="flex flex-col px-4 py-12 md:px-16">
+      <div class="flex flex-col gap-4">
+        <h2 id="contact" class="text-title2 text-color-title">Contacto</h2>
+        <p class="text-body text-color-body">
+          ¿Tienes un proyecto en mente o simplemente quieres enviar un saludo o
+          hacer alguna pregunta?
+        </p>
+      </div>
       
-      <!-- Para revisar luego:
-      Como cambiar el color de un placeholder. como seleccionarlo bien para modificarlo. 
-      -->
-      <form action="#" method="POST" class="max-w-7xl sm:pt-8">
+      <form action="#" method="POST" class="max-w-7xl pt-8">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-3">
           <div>
             <label
@@ -79,7 +78,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
                 placeholder="Ingresa tu nombre o apodo"
                 autocomplete="given-name"
                 required 
-                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault placeholder:text-inputText-textDefault hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
+                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault border-[1px] border-inputText-borderDefault placeholder:text-inputText-textDefault hover:border-inputText-borderHovered hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
               />
             </div>
           </div>
@@ -98,7 +97,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
                 placeholder="¿A qué mail puedo responderte?"
                 autocomplete="email"
                 required 
-                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault placeholder:text-inputText-textDefault hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
+                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault border-[1px] border-inputText-borderDefault placeholder:text-inputText-textDefault hover:border-inputText-borderHovered hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
               />
             </div>
           </div>
@@ -116,7 +115,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
                 id="subject"
                 placeholder="El motivo por el cúal me contactas"
                 autocomplete="organization"
-                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault placeholder:text-inputText-textDefault hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
+                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault border-[1px] border-inputText-borderDefault placeholder:text-inputText-textDefault hover:border-inputText-borderHovered hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
               />
             </div>
           </div>
@@ -134,7 +133,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
                 id="message"
                 rows="4"
                 placeholder="Cuéntame más detalles de tu proyecto, idea, etc."
-                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault placeholder:text-inputText-textDefault hover:ring-inputText-borderHovered focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50"
+                class="block w-full rounded-lg p-4 text-inputText-textOnFocus bg-inputText-bg ring-1 ring-inset ring-color ring-inputText-borderDefault border-[1px] border-inputText-borderDefault placeholder:text-inputText-textDefault hover:border-inputText-borderHovered hover:ring-inputText-borderHovered focus:ring-2 focus:ring-inset focus:ring-color focus:ring-violet-50"
               ></textarea>
             </div>
           </div>
@@ -144,8 +143,8 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
 
           <button 
             type="submit"
-            class="flex flex-row align-middle justify-center gap-2 bg-button-bgPrimary text-button-labelPrimary font-semibold rounded-lg hover:bg-button-bgPrimaryHovered duration-200 hover:shadow-lg focus:bg-button-bgPrimaryPressed focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none !scroll-smooth">
-            Send
+            class="flex flex-row w-full md:w-auto align-middle justify-center gap-2 bg-button-bgPrimary text-button-labelPrimary font-semibold rounded-lg hover:bg-button-bgPrimaryHovered duration-200 hover:shadow-lg focus:bg-button-bgPrimaryPressed focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none !scroll-smooth">
+            Enviar mensaje
           </button>
 
 

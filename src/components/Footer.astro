@@ -1,6 +1,6 @@
 <footer class="flex flex-col w-full bg-surface-secondary px-8 py-12 gap-10">
-  <div class="flex flex-row justify-between items-center">
-    <div>
+  <div class="flex gap-6 justify-center md:flex-row md:justify-between items-center">
+    <div class="[&>svg>path]:fill-color-title hidden md:flex">
       <svg
         width="206"
         height="32"
@@ -44,7 +44,7 @@
         data-dropdown-toggle="language-dropdown-menu"
         class="flex rounded-xl gap-1 items-center font-medium justify-center px-3 py-2 text-color-title text-body hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
       >
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M9.38 21.646A9.985 9.985 0 0 0 12 22l.141-.001a2.998 2.998 0 0 0 2.515-1.425c.542-.876.6-1.953.153-2.88l-.198-.415c-.453-.942-.097-1.796.388-2.281.485-.485 1.341-.841 2.28-.388h.001l.413.199a2.99 2.99 0 0 0 2.881-.153A2.997 2.997 0 0 0 22 12.141a9.926 9.926 0 0 0-.353-2.76c-1.038-3.827-4.353-6.754-8.246-7.285-3.149-.427-6.241.602-8.471 2.833S1.666 10.247 2.096 13.4c.53 3.894 3.458 7.208 7.284 8.246zM15.5 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-5-1a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM9 15.506a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-2.5-6.5a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 6.5 9.006z"></path></svg>
+      <i class='bx bxs-moon'></i>
         OS Default
         <svg
           class="h-6 w-6"
@@ -107,17 +107,7 @@
               role="menuitem"
             >
               <div class="inline-flex items-center">
-                <svg
-                  class="h-3.5 w-3.5 rounded-full mr-2"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="flag-icon-css-ar"
-                  viewBox="0 0 512 512"
-                  ><path fill="#ffce00" d="M0 341.3h512V512H0z"></path><path
-                    d="M0 0h512v170.7H0z"></path><path
-                    fill="#d00"
-                    d="M0 170.7h512v170.6H0z"></path></svg
-                >
+                <i class='bx bxs-moon'></i>
                 Light mode
               </div>
             </a>
@@ -127,9 +117,9 @@
     </div>
   </div>
 
-  <span
-    class="flex justify-center text-center text-overline uppercase text-color-caption"
+  <small
+    class=" justify-center text-center text-overlineSm uppercase text-color-caption md:text-overline"
   >
-    ©Fabian Moreno · 2023<br />Built with ❤️ using Astro & Tailwind
-  </span>
+    ©Fabian Moreno · 2023<br />Built with ❤️, <a target="_blank" href="https://astro.build/" class="hover:underline"> Astro,</a> <a target="_blank" href="https://tailwindcss.com/" class="hover:underline">Tailwind</a> & <a target="_blank" href="https://www.netlify.com/" class="hover:underline">Netlify</a>
+  </small>
 </footer>
