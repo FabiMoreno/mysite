@@ -4,6 +4,38 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+    
+    extend:{
+      animation:{
+        'slide-in': 'slide-in 0.3s ease-in',
+        'slide-out': 'slide-out 0.3s ease-out',
+      },
+        keyframes:{
+          'slide-in': {
+            '0%': {
+              transform: 'translateX(100%)',
+              opacity: '0',
+            },
+            '100%': {
+              transform: 'translateX(0)',
+              opacity: '1',
+            },
+          },
+      },
+        keyframes:{
+          'slide-out': {
+            '0%': {
+              transform: 'translateX(0%)',
+              opacity: '1',
+            },
+            '100%': {
+              transform: 'translateX(100%)',
+              opacity: '0',
+            },
+          },
+        },
+    },
+
 		fontFamily:{
 			outfit: ['Outfit-variable, sans-serif']
 		},
