@@ -20,16 +20,20 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
         <img
           src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719618/fabian-moreno-profile.webp"
           alt="foto de Fabián Moreno"
-          class="aspect-auto max-w-xs"
+          class="aspect-auto max-w-xs md:max-w-sm"
         />
         <div class="flex flex-col gap-8 items-stretch content-center">
           <h2 class="text-subtitle1 text-color-subtitle">
-            Hola, soy Fabián Moreno, Senior UX designer He liderado equipos UX
-            en aplicaciones web y nativas para la industria TechEd, PropTech,
-            Healthtech y Fintech. Gracias a mi pasión por la tecnología y el
-            Front-end tengo gran facilidad para comunicarme y gestionar equipos
-            de producto.
+            Hola, soy Fabián Moreno, Senior Product designer con más de 8 años diseñando herramientas digitales con un impacto positivo  en personas,
+            negocios y equipos. He liderado equipos UX en aplicaciones web y nativas para la industria TechEd, PropTech,
+            Healthtech, Fintech entre otras. Gracias a mi pasión por la tecnología y el Front-end puedo comunicarme facilmente con equipos técnicos
+            y alinear expectativas con el resto de los equipos.
+            <br /> 
+            Previamente trabajé mejorando la experiencia de inversión en Wall Street en Latam junto con <a class="underline underline-offset-2  hover:text-violet-50" target="_blank" href="https://www.quiena.com/">Quiena Inversiones</a> como Lead Product Designer. 
+            
           </h2>
+      
+
           <div class="flex flex-col gap-4 md:flex-row md:gap-6">
             <ButtonPrimary href="https://drive.google.com/file/d/1InDBWkHdXoELqvn6ulV2gYN0OC9iWGAX/view?usp=sharing">
               Descargar CV
@@ -62,7 +66,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
         </p>
       </div>
       
-      <form name="contact" action="" method="POST" netlify-honeypot="bot field" data-netlify="true" class="max-w-7xl pt-8">
+      <form name="contact" action="/200" method="POST" netlify-honeypot="bot field" data-netlify="true" class="max-w-7xl pt-8">
         <p class="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />

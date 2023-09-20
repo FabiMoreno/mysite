@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ButtonPrimary from "../components/ButtonPrimary.astro";
+---
+
+<Layout title="Fabián Moreno | Error 404">
+
+   
+    <main class=" w-full h-screen bg-card-surface flex flex-col justify-center [&>p]:text-center items-center px-4 gap-4">
+        <image class="max-w-sm" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695233966/error_2x_rbt9em.webp" >
+        <p class=" text-overline text-color-caption uppercase">Error 404</p>
+        <div class="flex flex-col gap-2  [&>p]:text-center">    
+            <p class=" text-title3 font-normal text-color-title">Houston, tenemos un problema</p>
+            <p class=" text-action font-normal text-color-subtitle sm:max-w-md">Parece que llegaste a un link roto, eliminado o que incluso nunca existió. Hace click en el botón para volver al inicio.</p>
+        </div>
+        <ButtonPrimary
+            href="/",
+        >
+        Volver al inicio
+        <i class='bx bx-left-arrow-alt bx-sm color-button-iconSecondary' slot="before"></i>
+        </ButtonPrimary>
+    </main>
+
+
+</Layout>
