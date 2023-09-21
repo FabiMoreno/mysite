@@ -91,33 +91,103 @@
               class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
               >Inicio
             </a>
+          </li>
+
+            <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
+              <a href="/#projects"
+                class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
+                >Proyectos
+              </a>
             </li>
+
             <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
               <a href="/more-info"
                 class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
                 >Más info
               </a>
             </li>
+
+            <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
+              <a href="/more-info#contact"
+                class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
+                >Contacto
+              </a>
+            </li>
           </ul>
-          
-        <!-- Lista de settings menú mobile -->
-        <ul class=" pt-8">
+        
+        
+          <!-- Lista de settings menú mobile -->
+
+
+
+          <ul class=" pt-8">
           <li>
             <p class=" text-overline text-color-caption uppercase pr-3">Ajustes</p>
           </li>
-          <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-            <a href="/"
-            class="flex flex-col w-full items-end py-2 px-3 text-body font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-            >Inicio
-          </a>
-          </li>
-          <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-            <a href="/more-info"
+
+            <button
+              type="button"
+              id="drop-down-themes-menu"
+              class="flex flex-row w-full rounded-xl gap-2 items-center font-medium justify-end px-3 py-2 text-color-title text-body hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
+            >
+          
+                Tema visual
+              <i class='bx bx-chevron-down bx-sm' ></i>
+            </button>
+      
+            <!-- Dropdown oculto con las opciones-->
+            <div
+              id="option-themes-menu"
+              class=" hidden z-50 top-[-10rem] right-0 my-4 text-action list-none bg-surface-primary divide-y divide-bg-button-bgTertiaryHoveredrounded-lg hover:text-button-labelTertiaryHovered"
+              >
+              <ul class="  py-2 font-medium" role="none">
+      
+                <li>
+                  <a
+                    href="#"
+                    class="cursor-pointer rounded-xl flex items-center gap-2 justify-end text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
+                    data-theme=""> 
+                    OS Default
+                    <i aria-hidden="true" class='bx bxs-adjust bx-xs color-button-iconSecondary'></i>
+                  </a>
+                </li>
+      
+                <li>
+                  <a
+                    
+                    class="cursor-pointer rounded-xl flex items-center gap-2 justify-end text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
+                    data-theme="dark">
+                    Modo oscuro
+                    <i aria-hidden="true" class='bx bxs-moon bx-xs color-button-iconSecondary'></i>
+                  </a>
+                </li>
+      
+                <li>
+                  <a
+                    
+                    class="cursor-pointer rounded-xl flex items-center gap-2 justify-end text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
+                    data-theme="light">
+                    Modo claro
+                    <i aria-hidden="true" class='bx bxs-sun bx-xs color-button-iconSecondary'></i>
+                  </a>
+                </li>
+      
+      
+              </ul>
+            </div>
+
+            <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
+              <a href="/"
               class="flex flex-col w-full items-end py-2 px-3 text-body font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-              >Más info
+              >Selector idiomas (WIP)
             </a>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <small class=" mt-16  text-overlineSm text-color-caption uppercase border-solid border-[1px] border-chip-border bg-chip-bgDisabled px-6 py-2 rounded-2xl">
+               v.1.0.0
+              </small>
+            </li>
+          </ul>
 
         </div>
 
@@ -133,6 +203,7 @@
   const openNavigation = document.getElementById('open-navigation');
   const mobileNav = document.getElementById('mobile-nav');
   const closeButton = document.getElementById('close-navigation');
+  const navOptions = mobileNav.querySelectorAll('a'); // Obtengo todos las opciones <a> dentro de mobileNav
 
   openNavigation.addEventListener('click', function() {
 
@@ -143,13 +214,85 @@
   closeButton.addEventListener('click', function() {
     mobileNav.classList.add('animate-slide-out');
     mobileNav.classList.add('translate-x-full', 'opacity-0');
+  });
+    // Agrego un oyente de eventos a las opciones de navegación
+    navOptions.forEach(function(option) {
+    option.addEventListener('click', function() {
+      mobileNav.classList.add('animate-slide-out');
+      mobileNav.classList.add('translate-x-full', 'opacity-0');
+    });
+  });
+    // Finalmente agrego un oyente de eventos al documento para cerrar mobileNav al hacer clic fuera de él
+    // Esto no me funciona como espero, creo qeu tiene que ver con el orden de ejecución pero no estoy seguro aún. 
+    //  document.addEventListener('click', function(event) {
+    //   if (!mobileNav.contains(event.target) && event.target !== openNavigation) {
+    //     mobileNav.classList.add('animate-slide-out');
+    //     mobileNav.classList.add('translate-x-full', 'opacity-0');
+    //   }
+    // });
 
+
+    
+</script>
+
+
+<script>//* Aquí empieza el JS de cambio de tema de mobile. Este solo tiene la palabra Menu al final para no usar los mismos IDs que el cambio del tema del footer. 
+  const dropDownButtonMenu = document.getElementById("drop-down-themes-menu");
+  const optionThemesMenu = document.getElementById("option-themes-menu");
+
+  dropDownButtonMenu.addEventListener("click", function(event) {
+    // Evita que el clic en el botón active el dropdown
+    event.stopPropagation();
+
+    // Muestra u oculta optionThemesMenu al hacer clic en el botón
+    if (optionThemesMenu.classList.contains("hidden")) {
+      optionThemesMenu.classList.remove("hidden");
+    } else {
+      optionThemesMenu.classList.add("hidden");
+    }
   });
 
-  // document.addEventListener('click', function(event){
-  //   if (event.target !== mobileNav && !mobileNav.contains(event.target) && event.target !== openNavigation) {
-  //     mobileNav.classList.add('animate-slide-out');
-  //     mobileNav.classList.add('translate-x-full', 'opacity-0');
-  //   }
-  // });
+  // Agrega un oyente de eventos al documento para cerrar optionThemesMenu al hacer clic fuera del botón
+  document.addEventListener("click", function(event) {
+    if (event.target !== dropDownButtonMenu) {
+      optionThemesMenu.classList.add("hidden");
+    }
+  });
+
+  // Evita que los clics dentro de optionThemesMenu cierren el dropdown
+  optionThemesMenu.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
+  // Recupera y aplica el tema seleccionado al cargar la página
+  document.addEventListener("DOMContentLoaded", function() {
+    const selectedTheme = localStorage.getItem("selectedTheme") || "";
+    applyTheme(selectedTheme);
+  });
+
+  // Función para aplicar el tema seleccionado
+  function applyTheme(selectedTheme) {
+    const html = document.documentElement;
+
+    if (selectedTheme === "dark") {
+      html.setAttribute("data-theme", "dark");
+    } else if (selectedTheme === "light") {
+      html.setAttribute("data-theme", "light");
+    } else {
+      html.removeAttribute("data-theme");
+    }
+
+    // Guarda la selección en localStorage
+    localStorage.setItem("selectedTheme", selectedTheme);
+
+    // Oculta el dropdown de opciones
+    optionThemesMenu.classList.add("hidden");
+
+  }
+
+  // Agrego un oyente de eventos para cambiar el tema al hacer clic en una opción
+  optionThemesMenu.addEventListener("click", function(event) {
+    const selectedTheme = event.target.getAttribute("data-theme") || "";
+    applyTheme(selectedTheme);
+  });
 </script>
