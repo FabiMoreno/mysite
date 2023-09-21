@@ -38,80 +38,62 @@
       </svg>
     </div>
 
-    <div>
+    <div class=" relative">
       <button
         type="button"
-        data-dropdown-toggle="language-dropdown-menu"
-        class="flex rounded-xl gap-1 items-center font-medium justify-center px-3 py-2 text-color-title text-body hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
+        id="drop-down-themes"
+        class="flex rounded-xl gap-2 items-center font-medium justify-center px-3 py-2 text-color-title text-body hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
       >
-      <i class='bx bxs-moon'></i>
-        OS Default
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"></path>
-        </svg>
+        <i class='bx bxs-adjust bx-xs'></i>
+          Tema visual
+        <i class='bx bx-chevron-down bx-sm' ></i>
+
       </button>
       <!-- Dropdown -->
       <div
-        class="z-50 hidden my-4 text-action list-none bg-surface-primary divide-y divide-neutral-50 rounded-lg shadow"
-        id="language-dropdown-menu"
-      >
+        class=" hidden z-50 absolute top-[-10rem] right-0 my-4 text-action list-none bg-surface-primary divide-y divide-bg-button-bgTertiaryHoveredrounded-lg shadow-lg hover:text-button-labelTertiaryHovered"
+        id="option-themes"
+        >
         <ul class="py-2 font-medium" role="none">
           <li>
             <a
               href="#"
-              class="block text-color-body title px-4 py-2 hover:bg-button-bgSecondaryHovered"
+              class="block text-color-body title px-4 py-2 hover:bg-button-bgSecondaryHovered hover:text-button-labelTertiaryHovered"
               role="menuitem"
             >
-              <div class="inline-flex items-center">
-                <svg
-                  aria-hidden="true"
-                  class="h-3.5 w-3.5 rounded-full mr-2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="flag-icon-css-us"
-                  viewBox="0 0 512 512"
-                  ><g fill-rule="evenodd"
-                    ><g stroke-width="1pt"
-                      ><path
-                        fill="#bd3d44"
-                        d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                        transform="scale(3.9385)"></path><path
-                        fill="#fff"
-                        d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
-                        transform="scale(3.9385)"></path></g
-                    ><path
-                      fill="#192f5d"
-                      d="M0 0h98.8v70H0z"
-                      transform="scale(3.9385)"></path><path
-                      fill="#fff"
-                      d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
-                      transform="scale(3.9385)"></path></g
-                  ></svg
-                >
-                Dark mode
-              </div>
+              <p class="flex flex-row gap-2 items-center">
+                <i aria-hidden="true" class='bx bxs-adjust bx-xs color-button-iconSecondary'></i>
+                OS Default
+              </p>
             </a>
           </li>
           <li>
             <a
               href="#"
-              class="block text-color-body title px-4 py-2 hover:bg-button-bgSecondaryHovered"
+              class="block text-color-body title px-4 py-2 hover:bg-button-bgSecondaryHovered hover:text-button-labelTertiaryHovered"
               role="menuitem"
             >
-              <div class="inline-flex items-center">
-                <i class='bx bxs-moon'></i>
-                Light mode
-              </div>
+              <p class="flex flex-row gap-2  items-center">
+                <i aria-hidden="true" class='bx bxs-moon bx-xs color-button-iconSecondary'></i>
+                Dark mode
+              </p>
             </a>
           </li>
+
+          <li>
+            <a
+              href="#"
+              class="block text-color-body title px-4 py-2 hover:bg-button-bgSecondaryHovered hover:text-button-labelTertiaryHovered"
+              role="menuitem"
+            >
+              <p class="flex flex-row gap-2 items-center">
+                <i aria-hidden="true" class='bx bxs-sun bx-xs color-button-iconSecondary'></i>
+                Light mode
+              </p>
+            </a>
+          </li>
+
+
         </ul>
       </div>
     </div>
@@ -123,3 +105,27 @@
     ©Fabian Moreno · 2023<br />Built with ❤️, <a target="_blank" href="https://astro.build/" class="hover:underline"> Astro,</a> <a target="_blank" href="https://tailwindcss.com/" class="hover:underline">Tailwind</a> & <a target="_blank" href="https://www.netlify.com/" class="hover:underline">Netlify</a>
   </small>
 </footer>
+
+<script>
+  const dropDownThemes = document.getElementById('drop-down-themes');
+  const optionThemes = document.getElementById('option-themes');
+ 
+
+  dropDownThemes.addEventListener('click', function(event) {
+
+    event.stopPropagation();
+
+    if (optionThemes.classList.contains('hidden')) {
+      optionThemes.classList.remove('hidden');
+    } else {
+      optionThemes.classList.add('hidden');
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    if (event.target !== dropDownThemes) {
+      optionThemes.classList.add('hidden');
+    }
+  });
+ 
+</script>

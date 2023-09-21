@@ -52,6 +52,92 @@ html {
     --violet90: 256deg 37% 25%;
   }
 
+  @media (prefers-color-scheme: dark ) {
+    /* Default System color */
+    :root {
+      --bg-primary: var(--neutral20);
+      --bg-secondary: var(--neutral10);
+      --button-bg-primary: var(--violet50);
+      --button-bg-primary-disabled: var(--neutral30);
+      --button-bg-primary-hovered: var(--violet70);
+      --button-bg-primary-pressed: var(--violet70);
+      --button-bg-secondary: var(--neutral10);
+      --button-bg-secondary-disabled: var(--neutral10);
+      --button-bg-secondary-hovered: var(--neutral30);
+      --button-bg-secondary-pressed: var(--violet70);
+      --button-bg-tertiary-hovered: var(--neutral30);
+      --button-border-secondary: var(--neutral40);
+      --button-border-secondary-disabled: var(--neutral30);
+      --button-border-secondary-hovered: var(--violet50);
+      --button-border-secondary-pressed: var(--violet70);
+      --button-border-tertiary-selected: var(--violet70);
+      --button-border-tertiary-pressed: var(--violet70);
+      --button-icon-primary: var(--neutral10);
+      --button-icon-primary-disabled: var(--neutral40);
+      --button-icon-secondary: var(--neutral80);
+      --button-icon-secondary-disabled: var(--neutral40);
+      --button-icon-secondary-hovered: var(--neutral80);
+      --button-icon-secondary-pressed: var(--neutral10);
+      --button-icon-tertiary: var(--neutral80);
+      --button-icon-tertiary-disabled: var(--neutral40);
+      --button-icon-tertiary-hovered: var(--violet50);
+      --button-icon-tertiary-pressed: var(--violet70);
+      --button-icon-tertiary-selected: var(--violet70);
+      --button-label-primary: var(--neutral10);
+      --button-label-primary-disabled: var(--neutral40);
+      --button-label-secondary: var(--neutral80);
+      --button-label-secondary-disabled: var(--neutral40);
+      --button-label-secondary-hovered: var(--neutral80);
+      --button-label-secondary-pressed: var(--neutral10);
+      --button-label-tertiary: var(--neutral80);
+      --button-label-tertiary-disabled: var(--neutral40);
+      --button-label-tertiary-hovered: var(--violet70);
+      --button-label-tertiary-pressed: var(--violet70);
+      --button-label-tertiary-selected: var(--violet70);
+      --card-bg: var(--neutral10);
+      --card-border: var(--neutral30);
+      --card-border-hovered: var(--violet50);
+      --chip-bg: var(--neutral10);
+      --chip-bg-disabled: var(--neutral10);
+      --chip-bg-hovered: var(--neutral30);
+      --chip-bg-selected: var(--violet50);
+      --chip-border: var(--neutral30);
+      --chip-border-disabled: var(--neutral30);
+      --chip-border-hovered: var(--violet30);
+      --chip-border-selected: var(--violet50);
+      --chip-content: var(--neutral60);
+      --chip-content-disabled: var(--neutral40);
+      --chip-content-hovered: var(--neutral60);
+      --chip-content-selected: var(--neutral20);
+      --input-text-bg: var(--neutral10);
+      --input-text-bg-disabled: var(--neutral30);
+      --input-text-bg-typed: var(--neutral30);
+      --input-text-border-default: var(--neutral30);
+      --input-text-border-error: var(--red50);
+      --input-text-border-hovered: var(--neutral40);
+      --input-text-border-onfocus: var(--violet50);
+      --input-text-border-typing: var(--violet50);
+      --input-text-description: var(--neutral50);
+      --input-text-description-error: var(--red50);
+      --input-text-icon: var(--neutral40);
+      --input-text-text-default: var(--neutral40);
+      --input-text-text-disabled: var(--neutral40);
+      --input-text-text-error: var(--neutral40);
+      --input-text-text-hovered: var(--neutral40);
+      --input-text-text-onfocus: var(--neutral80);
+      --input-text-text-typed: var(--neutral80);
+      --input-text-text-typing: var(--neutral80);
+      --input-text-title: var(--neutral80);
+      --input-text-title-disabled: var(--neutral40);
+      --input-text-title-error-required: var(--red50);
+      --text-body: var(--neutral60);
+      --text-caption: var(--neutral50);
+      --text-disabled: var(--neutral40);
+      --text-subtitle: var(--neutral60);
+      --text-title: var(--neutral80);
+    }
+  }
+
   :root[data-theme="light"] {
     /* light colors */
     --bg-primary: var(--neutral20);
