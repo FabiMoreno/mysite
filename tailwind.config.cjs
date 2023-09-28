@@ -5,10 +5,17 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
     
-    extend:{
+    extend:
+    {
       animation:{
         'slide-in': 'slide-in 0.3s ease-in',
         'slide-out': 'slide-out 0.3s ease-out',
+        'fade-up': 'fade-up 2s',
+        'fade-down': 'fade-down 2s ',
+        circle: 'circle 8s infinite',
+        circleup: 'circleup 8s infinite',
+        circledown: 'circledown 8s infinite',
+        floating: 'floating 8s infinite',
       },
         keyframes:{
           'slide-in': {
@@ -21,8 +28,7 @@ module.exports = {
               opacity: '1',
             },
           },
-      },
-        keyframes:{
+
           'slide-out': {
             '0%': {
               transform: 'translateX(0%)',
@@ -33,7 +39,79 @@ module.exports = {
               opacity: '0',
             },
           },
+
+          'fade-up': {
+            '0%': {
+              opacity: '0',
+              transform: 'translateY(30px) scale(0.9)',
+            },
+            '100%': {
+              opacity: '1',
+              transform: 'translateY(0px) scale(1)',
+            },
+          },
+          
+          'fade-down': {
+            '0%': {
+              opacity: '0',
+         
+            },
+            '100%': {
+              opacity: '1',
+             
+            },
+          },
+          
+          circle:{
+            '0%':{
+              transform: 'scale(1)',
+            },
+            '50%':{
+              transform: 'scale(1.1)',
+            },
+            '100%':{
+              transform: 'scale(1)',
+            },
+          },
+
+          circleup:{
+            '0%':{
+              transform: 'translate(0px, 0px) scale(1)',
+            },
+            '50%':{
+              transform: 'translate(-30px, -50px) scale(1.1)',
+            },
+            '100%':{
+              transform: 'translate(0px, 0px) scale(1)',
+            },
+          },
+
+          circledown:{
+            '0%':{
+              transform: 'translate(0px, 0px) scale(1)',
+            },
+            '50%':{
+              transform: 'translate(20px, 40px) scale(1.1)',
+            },
+            '100%':{
+              transform: 'translate(0px, 0px) scale(1)',
+            },
+          },
+          floating:{
+            '0%':{
+              transform: 'translate(0px, 0px)',
+            },
+            '50%':{
+              transform: 'translate(0px, -20px)',
+            },
+            '100%':{
+              transform: 'translate(0px, 0px)',
+            },
+          },
         },
+        
+
+     
     },
 
 		fontFamily:{
@@ -274,78 +352,5 @@ module.exports = {
         }
 
 			},
-		
 	},
-	// plugins: [
-  //   plugin(({ addComponents, theme }) => {
-  //     // theme props
-  //     // const colors = theme('colors');
-  //     const fontFamily = theme('fontFamily');
-  //     // commons
-  //     const hx = {
-  //       // color: colors.text.main,
-  //       fontFamily: fontFamily.sans,
-  //       lineHeight: 'normal',
-  //       fontWeight: 500,
-  //     };
-  //     const bx = {
-  //       // color: colors.text.block,
-  //       // fontFamily: fontFamily.block,
-  //       lineHeight: '140%',
-  //       fontWeight: 400,
-  //     };
-  //     // components
-  //     addComponents({
-  //       ['h1, .h1secondary']: {
-  //         ...hx,
-  //         fontSize: '3.500rem',
-  //       },
-  //       ['h2, .h2, .fabi']: {
-  //         ...hx,
-  //         fontSize: '3.000rem',
-  //       },
-  //       ['h3, .h3']: {
-  //         ...hx,
-  //         fontSize: '2.440rem',
-  //       },
-  //       ['h4, .h4']: {
-  //         ...hx,
-  //         fontSize: '1.950rem',
-  //       },
-  //       ['h5, .h5']: {
-  //         ...hx,
-  //         fontSize: '1.500rem',
-  //       },
-  //       ['h6, .h6']: {
-  //         ...hx,
-  //         fontSize: '1.250rem',
-  //       },
-  //       ['p, .p']: {
-  //         ...bx,
-  //         fontSize: '1.000rem',
-  //       },
-  //       ['input, .input']: {
-  //         ...bx,
-  //         fontSize: '1.000rem',
-  //       },
-  //       ['small, .small']: {
-  //         ...bx,
-  //         fontSize: '0.800rem',
-  //       },
-  //       ['span, .span']: {
-  //         ...bx,
-  //         letterSpacing: '0.1125rem',
-  //         textTransform: 'uppercase',
-  //         fontSize: '0.640rem',
-  //       },
-  //       ['a, .a']: {
-  //         ...bx,
-  //         fontSize: '1.000em',
-  //         cursor: 'pointer',
-  //         textDecoration: 'underline',
-  //       }
-  //     });
-
-  //   }),
-  // ],
 }

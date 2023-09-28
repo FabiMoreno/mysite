@@ -6,34 +6,42 @@ import CardHome from "../components/CardHome.astro";
 import CtaBanner from "../components/CtaBanner.astro";
 import ButtonPrimary from "../components/ButtonPrimary.astro";
 import ButtonSecondary from "../components/ButtonSecondary.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 
 <Layout title="Fabián Moreno | Product Designer">
   <!--Componente Nav -->
   <Navbar />
   
+  <meta http-equiv="refresh" content="0;url=/en/" />
   <main class="flex justify-center flex-col max-w-7xl mx-auto antialiased">
     <div class="flex flex-col px-4 pt-32 gap-y-8 pb-10 md:pt-40 md:py-12 md:px-16">
       <section class="flex flex-col justify-center gap-6">
         <p class="text-largeMobile text-color-title lg:text-largeDesktop hyphens-manual">
-          Hola 👋🏼 soy Fabián,<br /> Sr Product Designer 
+          Hi 👋🏼 I'm Fabián,<br /> Sr Product Designer 
         </p>
         <h1 class="text-subtitle1 text-color-subtitle hyphens-manual">
-          Más de 8 años diseñando herramientas digitales para generar  <br />un impacto positivo  en personas, negocios y equipos. 
+          More than 8 years designing digital tools to create a positive impact on individuals, businesses, and teams. 
         </h1>
       </section>
       <section class="flex flex-row gap-x-4">
 
         <ButtonPrimary
           href="/#projects"
+          target="_self"
           >
-          Ver proyectos
+          Check projects
         </ButtonPrimary>
 
         <ButtonSecondary
         href="/more-info#contact"
+        target="_self"
         >
-          Contáctame
+          Get in touch
           <i class='bx bx-right-arrow-alt bx-sm color-button-iconSecondary' slot="after"></i>
         </ButtonSecondary>
           
@@ -42,42 +50,42 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
 
 
       <div class="flex flex-col items-center px-4 pt-10 md:px-16 gap-y-3">
-        <h2 id="projects" class="text-title2 text-color-title">Proyectos destacados</h2>
+        <h2 id="projects" class="text-title2 text-color-title">Feature projects</h2>
         <p class=" text-center text-overline text-color-caption uppercase">
-          De proyectos inmobilidarios a Fintech
+          From real estate projects to Fintech
         </p>
       </div>
   
 
     <article class="grid grid-cols-1 md:grid-cols-2 gap-8 content-start py-8 px-4 md:px-16">
         <CardHome 
-        title= "Marketplace farmacéutico",
-        body="Diseño MVP para plataforma de compra y venta de productos farmacéuticos en Argentina" ,
-        href="/pharmaceutical-marketplace/",
-        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719618/trocando-preview.webp" ,
-        alt="Computadora portail mostrando una tabla de productos de trocando" ,
+        title= "Pharmaceutical Marketplace",
+        body="Designing MVP for a pharmaceutical product buying and selling platform in Argentina" ,
+        href={`/${lang}/pharmaceutical-marketplace`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914352/trocando-preview.webp" ,
+        alt="Laptop displaying a Trocando product list" ,
         tag1="Ux Lead" ,
         tag2="2023",
         >
       </CardHome>
       
       <CardHome 
-        title= "Inversiones automatizadas",
-        body="Diseño de App nativa para el producto de inversión automático en activos de WallStreet" ,
-        href="/automated-investments/",
+        title= "Automated investments",
+        body="Design of a native app for the automatic investment product on Wall Street" ,
+        href={`/${lang}/automated-investments`},
         image="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719619/investment-auto-preview.webp" ,
-        alt="Una mano sostiene un celular con la app de Quiena inversiones" ,
+        alt="A hand holds a cell phone with the Quiena investments app." ,
         tag1="Ux Lead" ,
         tag2="2020",
         >
       </CardHome>
 
       <CardHome 
-        title= "Inmobiliaria digital",
-        body="Diseño de app nativa para la compra y venta de propiedades en Buenos Aires y Argentina" ,
-        href="/digital-real-estate/",
-        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719618/real-state-preview.webp" ,
-        alt="Dos celulares que muestran un partes de la aplicación de compra venta de propiedades" ,
+        title= "Digital real estate",
+        body="Design of a native app for buying and selling properties in Buenos Aires and Argentina" , 
+        href={`/${lang}/digital-real-estate/`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914320/real-estate-preview.webp" ,
+        alt="Two cell phones that show a part of the property buying and selling application" ,
         tag1="Ux Lead" ,
         tag2="2019",
         >
@@ -85,10 +93,10 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
 
       <CardHome 
         title= "D'aria propiedades",
-        body="Rediseño del sitio de  D’aria propiedades para alquilar, comprar y vender propiedades" ,
-        href="/daria-real-estate/",
-        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719618/daria-preview.webp" ,
-        alt="Vista previa de una computadora portatil y un telefeno con el home de la plataforma de Daria" ,
+        body="Redesign of the D'aria Properties website for renting, buying, and selling properties" ,
+        href={`/${lang}/daria-real-estate/`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914331/daria-preview.webp" ,
+        alt="Preview of a laptop and a phone with the home of the D'aria platform" ,
         tag1="Ux Lead" ,
         tag2="2018",
         >
@@ -96,7 +104,7 @@ import ButtonSecondary from "../components/ButtonSecondary.astro";
     </article>
   </main>
   <CtaBanner
-    content="¿Estas creando un proyecto, necesitas asesoría o simplemente quieres enviar un saludo?"
+    content="Are you creating a project, in need of guidance, or just want to say hello?"
   >
   </CtaBanner>
 </Layout>

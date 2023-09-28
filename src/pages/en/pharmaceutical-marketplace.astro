@@ -1,0 +1,191 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Quote from "../../components/Quote.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Fabián Moreno - Product Designer - Trocando Pharma">
+  <!--Componente Nav -->
+  <Navbar />
+
+  <section class="flex flex-col  justify-center md:max-w-7xl mx-auto pt-32 pb-8 px-4 md:px-16 animate-fade-up delay-150">
+    <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">
+      {t('trocando-title')}
+    </h1>
+
+    <ul
+      class="grid grid-cols-2 pr-8 [&>li]:items-start pt-10 gap-x-0 gap-y-4 sm:gap-14 md:[&>li]:flex sm:flex sm:flex-wrap sm:[&>li]:flex-col "
+    >
+      <li class=" col-start-1 col-span-1">
+        <p class=" text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('trocando-item-client-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('trocando-item-client-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('trocando-item-roll-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('trocando-item-roll-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-1 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('trocando-item-timeframe-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('trocando-item-timeframe-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          Link
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+         <a href="https://trocando.com.ar/" target="_Blank">View Website</a>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <img loading="lazy" 
+    src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914352/trocando-preview.webp" 
+    class="aspect-[10/6] object-cover md:aspect-auto animate-fade-up delay-150"  
+    alt="Laptop displaying a list of Trocando products"
+  />
+    
+  <main class="flex flex-col justify-center  max-w-4xl mx-auto px-4 pt-12 md:px-16 animate-fade-up delay-150">
+    <h4 class="text-subtitle1 text-color-title font-normal">
+      {t('trocando-intro')}
+    </h4>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('trocando-title1')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('trocando-subtitle1')}
+        </h3>
+      </div>
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719616/trocando-01.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="Preview of Trocando flowcharts"
+        />
+        <p class="text-body text-color-body">
+          {t('trocando-p1')}
+        </p>
+    </section>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">
+          {t('trocando-title2')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('trocando-subtitle2')}
+        </h3>
+      </div>
+
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719616/trocando-02.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+        alt="Brand identity proposal for Trocando" 
+      />
+      <p class="text-body text-color-body">
+        {t('trocando-p2')}
+      </p>
+    </section>
+  </main>
+
+  <!-- Sección completa para Quote -->
+  <Quote
+  quote={t('quote-2')}, 
+  author={t('quote-2-author')},
+  >
+  </Quote>
+  <!-- termina Quote -->
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto pb-16 px-4 md:px-16 gap-6">
+   
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('trocando-title3')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('trocando-subtitle3')}
+        </h3>
+      </div>
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719616/trocando-03.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="Preview of all UI components for Trocando" 
+        />
+      <p class="text-body text-color-body">
+        {t('trocando-p3')}
+      </p>
+
+      <div
+        class="flex flex-col gap-4"
+      >
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719616/trocando-04.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="High-quality flow view of Trocando" 
+        />
+      </div>
+      <p class="text-body text-color-body">
+        {t('trocando-p3b')}
+      </p>
+  </main>
+
+    <!-- Full width image -->
+    <div>
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914334/trocando-results.webp" 
+        class="aspect-[10/6] object-cover md:aspect-auto"
+        alt="Final screens of the Trocando platform." 
+      />
+    </div>
+    <!-- Ends full width image -->
+
+    <section class="flex justify-center flex-col max-w-4xl mx-auto py-16 px-4 md:px-16 gap-6">
+      
+      <div> 
+        <h2 class="text-title2 text-color-title">
+          {t('trocando-title4')}
+        </h2>
+      </div>
+      
+      <p class="text-body text-color-body">
+        {t('trocando-p4')}
+      </p>
+    </section>
+
+    <!-- Full Banner CTA  -->
+    <CtaBanner
+    content={t('global-cta')}
+    >
+    </CtaBanner>
+    <!-- ends Banner -->
+    <Footer />
+ 
+</Layout>

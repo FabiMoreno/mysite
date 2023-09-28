@@ -1,11 +1,33 @@
 ---
 interface Props {
 	href: string;
+    target: string;
 }
 
-const { href } = Astro.props;
+const { href, target } = Astro.props;
 ---
-<a href={href} class="flex flex-row align-middle justify-center gap-2 bg-button-bgPrimary text-button-labelPrimary font-semibold rounded-lg hover:bg-button-bgPrimaryHovered duration-200 hover:shadow-lg focus:bg-button-bgPrimaryPressed focus:ring-4 focus:ring-violet-10 px-6 py-4 focus:outline-none !scroll-smooth">
+<a 
+    href={href} 
+    target={target} 
+    class="
+        flex flex-row 
+        align-middle justify-center 
+        gap-2
+        px-4
+        py-3 
+        md:px-6 
+        md:py-4 
+        bg-button-bgPrimary 
+        text-button-labelPrimary font-semibold 
+        rounded-lg 
+        hover:bg-button-bgPrimaryHovered 
+        hover:shadow-lg 
+        focus:bg-button-bgPrimaryPressed 
+        focus:ring-4 
+        focus:ring-violet-10 
+        focus:outline-none 
+        duration-200 
+        ">
     <slot name="before" />
     <slot> Label Button </slot>
     <slot name="after" />

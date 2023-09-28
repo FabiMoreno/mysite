@@ -1,0 +1,229 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Quote from "../../components/Quote.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Fabián Moreno - Product Designer - D'aria Propiedades">
+  <!--Componente Nav -->
+  <Navbar />
+
+  <section class="flex flex-col  justify-center md:max-w-7xl mx-auto pt-32  pb-8 px-4  md:px-16 animate-fade-up delay-150">
+    <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">
+      {t('daria-title')}
+    </h1>
+
+    <ul
+      class="grid grid-cols-2 pr-8 [&>li]:items-start pt-10 gap-x-0 gap-y-4 sm:gap-14 md:[&>li]:flex sm:flex sm:flex-wrap sm:[&>li]:flex-col "
+    >
+      <li class=" col-start-1 col-span-1">
+        <p class=" text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('daria-item-client-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('daria-item-client-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('daria-item-roll-title')}
+          Rol
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('daria-item-roll-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-1 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('daria-item-timeframe-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('daria-item-timeframe-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          Link
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          <a href="https://www.daria.com.ar/propiedades/Departamentos-o-Casas-o-PH-o-Campos-o-Terrenos" target="_blank">View Website</a>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+
+  <img 
+    loading="lazy" 
+    src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914331/daria-preview.webp" 
+    class="aspect-[10/6] object-cover md:aspect-auto animate-fade-up delay-150"  
+    alt="Preview of a laptop and a phone with the D'aria platform's homepage"
+  />
+    
+  <main class="flex flex-col justify-center  max-w-4xl mx-auto px-4 pt-12 md:px-16 animate-fade-up delay-150">
+    <h4 class="text-subtitle1 text-color-title font-normal">
+      {t('daria-intro')}
+    </h4>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('daria-title1')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('daria-subtitle1')}
+        </h3>
+      </div>
+        <p class="text-body text-color-body">
+          {t('daria-p1')}
+        </p>
+    </section>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('daria-title2')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('daria-subtitle2')}
+        </h3>
+      </div>
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914329/daria-01.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="Image showing the old design of D'aria" 
+        />
+        <p class="text-body text-color-body">
+          {t('daria-p2')}
+        </p>
+    </section>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('daria-title3')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('daria-subtitle3')}
+        </h3>
+      </div>
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914325/daria-02.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="Medium-quality designs of the D'aria redesign" 
+        />
+        <p class="text-body text-color-body">
+          {t('daria-p3')}
+        </p>
+    </section>
+  </main>
+
+  <!-- Sección completa para Quote -->
+  <Quote
+  quote={t('quote-4')}, 
+  author={t('quote-4-author')},
+  >
+  </Quote>
+  <!-- termina Quote -->
+
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto pb-16 px-4 md:px-16 gap-6">
+   
+    <div class="flex flex-col gap-2"> 
+      <h2 class="text-title2 text-color-title">
+        {t('daria-title4')}
+      </h2>
+      <h3 class="text-overlineSm text-color-caption uppercase">
+        {t('daria-subtitle4')}
+      </h3>
+    </div>
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914336/daria-03.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+        alt="High-quality mobile views of the D'aria redesign" 
+      />
+    <p class="text-body text-color-body">
+      {t('daria-p4')}
+    </p>
+
+    <div
+      class="flex flex-col gap-4"
+    >
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914338/daria-04.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+        alt="High-quality desktop design view of D'aria Propiedades, featuring the home page on the left and a list of properties with the search and filtering bar on the right" 
+      />
+    </div>
+    <div
+      class="flex flex-col gap-4"
+    >
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914341/daria-05.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+        alt="High-quality desktop design view of D'aria Propiedades, showing the product card for a house on the left and the map search view on the right" 
+      />
+    </div>
+    <p class="text-body text-color-body">
+      {t('daria-p4b')}
+    </p>
+</main>
+
+    <!-- Full width image -->
+    <div>
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914343/daria-results.webp" 
+        class="aspect-[10/6] object-cover md:aspect-auto" 
+        alt="Several screens of D'aria Propiedades with the new user experience" 
+      />
+    </div>
+    <!-- Ends full width image -->
+
+
+    <section class="flex flex-col  max-w-4xl mx-auto py-16 px-4 md:px-16 gap-6">
+      <div>
+      <h2 class="text-title2 text-color-title">
+        {t('daria-title5')}
+      </h2>
+      </div>
+        <div class="flex flex-col md:flex-row gap-6 "> 
+        <video
+          src="https://res.cloudinary.com/dfh5otihs/video/upload/v1694743274/daria-results-video_l3hz7f.mp4"
+          playsinline
+          autoplay
+          loop
+          muted
+          preload="auto"
+          poster=""
+          class="flex  w-full md:max-w-[50%] rounded-lg">
+        </video>
+        <p class="text-body text-color-body">
+          {t('daria-p5')}
+        </p>
+      </div>
+    </section>
+
+    <!-- Full Banner CTA  -->
+    <CtaBanner
+    content={t('global-cta')}
+    >
+    </CtaBanner>
+    <!-- ends Banner -->
+
+  <Footer />
+</Layout>

@@ -1,0 +1,157 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import CardHome from "../../components/CardHome.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import ButtonPrimary from "../../components/ButtonPrimary.astro";
+import ButtonSecondary from "../../components/ButtonSecondary.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+<Layout title="Fabián Moreno | Product Designer">
+  <!--Componente Nav -->
+  <Navbar />
+  
+  <main class="flex justify-center flex-col max-w-7xl mx-auto antialiased">
+    <div class="relative flex flex-col px-4 pt-32 gap-y-8 pb-10 md:pt-40 md:py-12 md:px-16 animate-fade-up delay-150">
+      <div class="absolute -z-30 -top-36 w-60 h-60 md:top-48 md:right-16 md:w-96 md:h-96 bg-violet-70 rounded-full filter blur-3xl md:opacity-90 animate-circle "></div>
+      <div class="absolute -z-20 -top-40 md:top-48 md:right-56 w-40 h-40 bg-[#AC9AE0] rounded-full filter blur-2xl md:opacity-100 animate-circleup"></div>
+
+      <img 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695844043/astro-logo_x6ipj9.png" 
+        class="absolute -z-0 top-44  animate-floating hidden md:flex md:-right-16 lg:right-16" 
+        alt="astronaut on a small moon holding a flag">
+
+      <section class="flex flex-col justify-center gap-6">
+        <div>
+          <p class="text-title1 md:text-largeMobile text-color-title lg:text-largeDesktop ">
+            {t('home-herotitle-line1')}
+          </p>
+          <p class="text-title1 md:text-largeMobile text-color-title lg:text-largeDesktop">
+            <span id="text"></span>
+          
+          </p>
+        </div>
+        <h1 class="text-subtitle1 text-color-subtitle md:w-8/12 lg:w-[55%] xl:w-[44%]">
+          {t('home-herodescription')}
+        </h1>
+      </section>
+      <section class="flex flex-row gap-x-4">
+
+        <ButtonPrimary
+          href={`/${lang}/#projects`},
+         
+          target="_self"
+          >
+          {t('button-checkprojects')}
+        </ButtonPrimary>
+
+        <ButtonSecondary
+        href={`/${lang}/more-info#contact`},
+        
+        target="_self"
+        >
+          {t('button-getintouch')}
+          <i class='bx bx-right-arrow-alt bx-sm color-button-iconSecondary' slot="after"></i>
+        </ButtonSecondary>
+          
+      </section>
+    </div>
+
+
+      <div class="flex flex-col items-center px-4 pt-10 md:px-16 gap-y-3 animate-fade-up delay-150">
+        <h2 id="projects" class="text-title2 text-color-title">
+          {t('home-title-projects')}
+        </h2>
+        <p class=" text-center text-overline text-color-caption uppercase">
+          {t('home-subtitle-projects')}
+        </p>
+      </div>
+  
+
+    <article class="grid grid-cols-1 md:grid-cols-2 gap-8 content-start py-8 px-4 md:px-16 animate-fade-up  delay-150">
+        <CardHome 
+        title= {t('home-trocando-title')},
+        body={t('home-trocando-description')},
+        href={`/${lang}/pharmaceutical-marketplace`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914352/trocando-preview.webp" ,
+        alt="Laptop displaying a Trocando product list" ,
+        tag1="Ux Lead" ,
+        tag2="2023",
+        >
+      </CardHome>
+      
+      <CardHome 
+        title= {t('home-quienaauto-title')},
+        body={t('home-quienaauto-description')},
+        href={`/${lang}/automated-investments`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719619/investment-auto-preview.webp" ,
+        alt="A hand holds a cell phone with the Quiena investments app." ,
+        tag1="Ux Lead" ,
+        tag2="2020",
+        >
+      </CardHome>
+
+      <CardHome 
+        title= {t('home-realestate-title')},
+        body={t('home-realestate-description')},
+        href={`/${lang}/digital-real-estate`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914320/real-estate-preview.webp" ,
+        alt="Two cell phones that show a part of the property buying and selling application" ,
+        tag1="Ux Lead" ,
+        tag2="2019",
+        >
+      </CardHome>
+
+      <CardHome 
+        title= {t('home-daria-title')},
+        body= {t('home-daria-description')},
+        href={`/${lang}/daria-real-estate`},
+        image="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914331/daria-preview.webp" ,
+        alt="Preview of a laptop and a phone with the home of the D'aria platform." ,
+        tag1="Ux Lead" ,
+        tag2="2018",
+        >
+      </CardHome>
+    </article>
+  </main>
+
+  <div class="flex flex-col align-middle items-center justify-center bg-gradient-to-br from-violet-90 to-neutral-80">
+    <section
+      class="flex flex-col items-start  justify-center gap-8 max-w-7xl py-12 gap-y-8 px-4 md:px-16 md:flex-row md:items-center md:justify-between antialiased"
+    >
+      <h2 class="text-title2 text-neutral-20 md:w-7/12 font-normal">
+        {t('home-cta')}
+      </h2>
+  
+      <ButtonSecondary 
+        href="/en/more-info#contact"
+        target="_self"
+        >
+        {t('button-getintouch')}
+        <i
+          class="bx bx-right-arrow-alt bx-sm color-button-iconSecondary"
+          slot="after"></i>
+      </ButtonSecondary>
+    </section>
+  </div>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#text", {
+      strings: ["Sr Product designer", "Coding Enthusiast", "Problem Solver"], 
+      loop : true,
+      typeSpeed : 100,
+      backSpeed : 40,
+      backDelay : 1500
+  
+    });
+  </script>
+</Layout>
+
+<Footer />
+

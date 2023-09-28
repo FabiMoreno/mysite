@@ -1,29 +1,42 @@
-<header class="flex px-4 py-2 md:px-8 items-center fixed top-0 w-full bg-surface-primary border-b border-card-border justify-between z-30">
-    <a class="flex flex-row items-center rounded-lg pr-2 hover:bg-button-bgTertiaryHovered" href="/">
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from './LanguagePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+<header class="flex px-4 py-2 md:px-8 items-center fixed top-0 w-full bg-surface-primary border-b border-card-border justify-between z-30 animate-fade-down">
+    <a class="flex flex-row items-center rounded-lg pr-2 hover:bg-button-bgTertiaryHovered" 
+      href={`/${lang}/`}>
         <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.6855 17.9131L19.1423 34.1631L31.2746 23.6644L15.6855 17.9131Z" fill="#B2B2B2"/>
             <path d="M8 28.0969L17.6487 38L19.1422 34.163L15.6854 17.913L12.9922 14.748L8 28.0969Z" fill="#E7E7E7"/>
             <path d="M26.4417 12L31.2745 23.6643L15.6854 17.913L12.9922 14.748L26.4417 12Z" fill="#DADADA"/>
             <path d="M31.1572 35.5327L17.6489 38L19.1424 34.163L31.2746 23.6643L26.4419 12L34.9999 22.8475L31.1572 35.5327Z" fill="#9D9D9C"/>
         </svg>
-        <p class="text-body font-medium text-color-title">Fabián Moreno</p>	
+        <p class="text-body font-medium text-color-title">
+          Fabián Moreno
+        </p>	
     </a>	
     <nav class="flex">
         <ul class="flex items-center align-middle justify-center gap-x-6">
             <li class="hidden sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-                <a href="/"
-                    class="flex flex-row items-center py-2 px-3 gap-2 text-body font-medium  text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-                    >Inicio
+                <a href={`/${lang}/`} class="flex flex-row items-center py-2 px-3 gap-2 text-body font-medium  text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page">
+                  {t('home')}
                 </a>
             </li>
             <li class="hidden sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-                <a href="/more-info"
+                <a href={`/${lang}/more-info`}
                     class="flex flex-row items-center py-2 px-3 gap-2 text-body font-medium  text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-                    >Más info
+                    >{t('moreinfo')}
                 </a>
             </li>
 
            <!-- Dropdown button languages-->
+
+           <LanguagePicker />
             <li>
               <button
                 type="button" 
@@ -129,33 +142,39 @@
           </button>
           <ul>
             <li class=" pt-8">
-              <p class=" text-overline text-color-caption uppercase pr-3">Secciones</p>
+              <p class=" text-overline text-color-caption uppercase pr-3">
+                {t('sections')}
+              </p>
             </li>
             <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-              <a href="/"
+              <a href={`/${lang}/`}
               class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-              >Inicio
+              >
+              {t('home')}
             </a>
           </li>
 
             <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-              <a href="/#projects"
+              <a href={`/${lang}/#projects`}
                 class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-                >Proyectos
+                >
+                {t('projects')}
               </a>
             </li>
 
             <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-              <a href="/more-info"
+              <a href={`/${lang}/more-info`}
                 class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-                >Más info
+                >
+                {t('moreinfo')}
               </a>
             </li>
 
             <li class="sm:flex rounded-lg hover:bg-button-bgTertiaryHovered focus:bg-button-bgTertiaryPressed">
-              <a href="/more-info#contact"
+              <a href={`/${lang}/more-info#contact`}
                 class="flex flex-col w-full items-end py-2 px-3 text-title2 font-medium text-button-labelTertiary hover:text-button-labelTertiaryHovered" aria-current="page"
-                >Contacto
+                >
+                {t('contact')}
               </a>
             </li>
           </ul>
@@ -164,14 +183,16 @@
           <!-- Lista de settings menú mobile -->
           <ul class=" pt-8">
           <li>
-            <p class=" text-overline text-color-caption uppercase pr-3">Ajustes</p>
+            <p class=" text-overline text-color-caption uppercase pr-3">
+              {t('settings')}
+            </p>
           </li>
             <button
               type="button"
               id="drop-down-themes-menu"
               class="flex flex-row w-full rounded-xl gap-2 items-center font-medium justify-end px-3 py-2 text-color-title text-body hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
             >
-                Tema visual
+              {t('visual-theme')}
               <i class='bx bx-chevron-down bx-sm' ></i>
             </button>
       
@@ -197,7 +218,7 @@
                     
                     class="cursor-pointer rounded-xl flex items-center gap-2 justify-end text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
                     data-theme="dark">
-                    Modo oscuro
+                    {t('darkmode')}
                     <i aria-hidden="true" class='bx bxs-moon bx-xs color-button-iconSecondary'></i>
                   </a>
                 </li>
@@ -207,7 +228,7 @@
                     
                     class="cursor-pointer rounded-xl flex items-center gap-2 justify-end text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
                     data-theme="light">
-                    Modo claro
+                    {t('lightmode')}
                     <i aria-hidden="true" class='bx bxs-sun bx-xs color-button-iconSecondary'></i>
                   </a>
                 </li>

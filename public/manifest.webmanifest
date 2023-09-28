@@ -1,0 +1,36 @@
+{
+  "short_name": "Fabián Moreno  ",
+  "name": "Portfolio of Fabián Moreno",
+  "description": "Sr UX Product Designer with more than 8 years designing digital tools to create a positive impact on individuals, businesses, and teams.",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dfh5otihs/image/upload/v1695882986/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dfh5otihs/image/upload/v1695882986/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dfh5otihs/image/upload/v1695882986/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dfh5otihs/image/upload/v1695882986/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#E6E4EC",
+  "display": "minimal-ui",
+  "scope": "/",
+  "theme_color": "#100D18"
+}

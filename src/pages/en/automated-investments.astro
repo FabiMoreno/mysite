@@ -1,0 +1,239 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Quote from "../../components/Quote.astro";
+import CtaBanner from "../../components/CtaBanner.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Fabián Moreno - Product Designer - Quiena Automática">
+  <!--Componente Nav -->
+  <Navbar />
+
+  <section class="flex flex-col  justify-center md:max-w-7xl mx-auto pt-32 pb-8
+   px-4 md:px-16 animate-fade-up delay-150">
+    <h1 class="text-largeMobile text-color-title lg:text-largeDesktop">
+      {t('quiena-title')}
+    </h1>
+
+    <ul
+      class="grid grid-cols-2 pr-8 [&>li]:items-start pt-10 gap-x-0 gap-y-4 sm:gap-14 md:[&>li]:flex sm:flex sm:flex-wrap sm:[&>li]:flex-col "
+    >
+      <li class=" col-start-1 col-span-1">
+        <p class=" text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('quiena-item-client-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('quiena-item-client-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('quiena-item-roll-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('quiena-item-roll-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-1 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          {t('quiena-item-timeframe-title')}
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          {t('quiena-item-timeframe-value')}
+        </p>
+      </li>
+
+      <li class=" col-start-2 col-span-1">
+        <p class="text-overlineSm  md:text-overline  text-color-caption uppercase">
+          Link
+        </p>
+        <p class=" text-action font-medium md:text-subtitle1 text-color-title">
+          <a href="https://www.quiena.com/automatica" target="_blank">View Website</a>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <div>
+    <img 
+      loading="lazy" 
+      src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719619/investment-auto-preview.webp" 
+      class="aspect-[10/6] object-cover md:aspect-auto animate-fade-up delay-150" 
+      alt="Design of a native app for the automatic investment product in Wall Street assets"/>
+  </div>
+
+  <main class="flex flex-col justify-center  max-w-4xl mx-auto px-4 pt-12 md:px-16 animate-fade-up delay-150">
+    <h4 class="text-subtitle1 text-color-title font-normal">
+      {t('quiena-intro')}
+    </h4>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('quiena-title1')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('quiena-subtitle1')}
+        </h3>
+      </div>
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-01.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="Preview of the initial design of the Quiena Investments platform" 
+        />
+        <p class="text-body text-color-body">
+          {t('quiena-p1')}
+        </p>
+    </section>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">
+          {t('quiena-title2')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('quiena-subtitle2')}
+        </h3>
+      </div>
+
+      <img 
+        loading="lazy"
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914340/investment-auto-03.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video" 
+        alt="Low-fidelity designs resulting from workshops and co-creation processes" 
+      />
+      <p class="text-body text-color-body">
+        {t('quiena-p2')}
+      </p>
+    </section>
+
+    
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">
+          {t('quiena-title3')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('quiena-subtitle3')}
+        </h3>
+      </div>
+  
+      <img
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914345/investment-auto-05.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video" 
+        alt="Photograph of a co-creation session with part of the team" 
+      />
+      <p class="text-body text-color-body">
+        {t('quiena-p3')}
+      </p>
+    </section>
+  </main>
+
+  <!-- Sección completa para Quote -->
+  <Quote
+  quote={t('quote-1')}, 
+  author={t('quote-1-author')},
+  >
+  </Quote>
+  <!-- termina Quote -->
+
+  <main class="flex justify-center flex-col max-w-4xl mx-auto pb-16 px-4 md:px-16 gap-6">
+   
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2"> 
+        <h2 class="text-title2 text-color-title">
+          {t('quiena-title-4')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('quiena-subtitle-4')}
+        </h3>
+      </div>
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719617/investment-auto-06.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video" 
+          alt="Simon Sinek's Golden Circle, part of a Brand Sprint workshop for Quiena Inversiones" 
+        />
+      <p class="text-body text-color-body">
+        {t('quiena-p4')}
+      </p>
+
+      <div class="flex flex-col gap-4">
+        <img 
+          loading="lazy" 
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719616/investment-auto-07.webp" 
+          class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+          alt="Brand manual and applications designed for Quiena Inversiones" 
+        />
+      </div>
+      <p class="text-body text-color-body">
+        {t('quiena-p4b')}
+      </p>
+    </section>
+
+    <section class="flex flex-col pt-12 gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-title2 text-color-title">
+          {t('quiena-title-5')}
+        </h2>
+        <h3 class="text-overlineSm text-color-caption uppercase">
+          {t('quiena-subtitle-5')}
+        </h3>
+      </div>
+  
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914318/investment-auto-08.webp" 
+        class="aspect-[5/4] rounded-lg object-cover md:aspect-video"
+        alt="Design and prototyping process of Quiena Automática for usability testing" 
+      />
+      <p class="text-body text-color-body">
+        {t('quiena-p5')}
+      </p>
+    </section>
+  </main>
+
+    <!-- Full width image -->
+    <div>
+      <img 
+        loading="lazy" 
+        src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695914347/investment-auto-results.webp" 
+        class="aspect-[10/6] object-cover md:aspect-auto"
+        alt="Different screens of the final result of Quiena Automática, featuring the product's main screen, projection view, and historical data" 
+      />
+    </div>
+    <!-- Ends full width image -->
+
+
+
+    <section class="flex justify-center flex-col max-w-4xl mx-auto py-16 px-4 md:px-16 gap-6">
+      
+      <div> 
+        <h2 class="text-title2 text-color-title">
+          {t('quiena-title-6')}
+        </h2>
+      </div>
+      
+      <p class="text-body text-color-body">
+        {t('quiena-p6')}
+      </p>
+    </section>
+
+   <!-- Full Banner CTA  -->
+   <CtaBanner
+    content={t('global-cta')}
+   >
+   </CtaBanner>
+   <!-- ends Banner -->
+
+  <Footer />
+</Layout>

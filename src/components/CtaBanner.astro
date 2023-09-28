@@ -1,4 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from './LanguagePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import ButtonSecondary from "../components/ButtonSecondary.astro";
 interface Props {
   content: string;
@@ -13,8 +19,9 @@ const { content } = Astro.props;
   >
     <h2 class="text-title2 text-neutral-20 font-normal">{content}</h2>
 
-    <ButtonSecondary href="/more-info#contact">
-      Contáctame
+    <ButtonSecondary
+      href={`/${lang}/more-info#contact`}>
+      {t('button-getintouch')}
       <i
         class="bx bx-right-arrow-alt bx-sm color-button-iconSecondary"
         slot="after"></i>

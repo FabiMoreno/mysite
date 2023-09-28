@@ -1,3 +1,11 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
 <footer class="flex flex-col w-full bg-surface-secondary px-8 py-12 gap-10">
   <div class="flex gap-6 justify-center md:flex-row md:justify-between items-center">
     <div class="[&>svg>path]:fill-color-title hidden md:flex">
@@ -45,7 +53,7 @@
         class="flex rounded-xl gap-2 items-center font-medium justify-center px-3 py-2 text-color-title text-body hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
       >
         <i class='bx bxs-adjust bx-xs'></i>
-          Tema visual
+          {t('visual-theme')}
         <i class='bx bx-chevron-down bx-sm' ></i>
       </button>
 
@@ -71,7 +79,7 @@
               class=" cursor-pointer flex flex-row gap-2 items-center it text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
               data-theme="dark">
               <i aria-hidden="true" class='bx bxs-moon bx-xs color-button-iconSecondary'></i>
-              Modo oscuro
+              {t('darkmode')}
             </a>
           </li>
 
@@ -81,7 +89,7 @@
               class="cursor-pointer flex flex-row gap-2 items-center text-color-body title px-4 py-2 hover:bg-button-bgTertiaryHovered hover:text-button-labelTertiaryHovered"
               data-theme="light">
               <i aria-hidden="true" class='bx bxs-sun bx-xs color-button-iconSecondary'></i>
-              Modo claro
+              {t('lightmode')}
             </a>
           </li>
 

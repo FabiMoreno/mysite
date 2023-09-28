@@ -14,7 +14,7 @@ const { href, title, body, image, alt, tag1, tag2 } = Astro.props;
 ---
 <div class="bg-card-surface [&>a>img]:aspect-[10/6] [&>a>img]:object-cover border-solid border-[1px] border-card-border rounded-lg overflow-hidden origin-bottom hover:drop-shadow-[0px_16px_0px_rgba(112,68,201,1.00)] hover:border-card-borderHovered [&>a>div>div>h2]:hover:text-violet-50 hover:-translate-y-4 transition-all ease-in-out delay-150">
     <a href={href} class="bg-card-surface">
-      <img src={image} alt={alt} class="" />
+      <img src={image} alt={alt} class=" " />
         <div class="p-6 md:p-8">
           <div class="flex flex-row justify-between items-center mb-2">
             <h2 class="text-title3 text-color-title">{title}</h2>

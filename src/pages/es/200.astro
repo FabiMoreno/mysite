@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ButtonPrimary from "../../components/ButtonPrimary.astro";
+---
+
+<Layout title="Fabián Moreno | Success 200">
+
+   
+    <main class=" w-full h-screen bg-card-surface flex flex-col justify-center [&>p]:text-center items-center px-4 gap-4">
+        <image class="max-w-[18rem]" src="https://res.cloudinary.com/dfh5otihs/image/upload/v1695233966/success_2x_zk3h8e.webp" >
+        <p class=" text-overline text-color-caption uppercase">status 200</p>
+        <div class="flex flex-col gap-2  [&>p]:text-center">    
+            <p class=" text-title3 font-normal text-color-title">Tu mensaje ha sido enviado</p>
+            <p class=" text-action font-normal text-color-subtitle sm:max-w-md">Te responderé dentro de las próximas 48 hs hábiles.</p>
+        </div>
+        <ButtonPrimary
+            href="/",
+        >
+        Volver al inicio
+        <i class='bx bx-left-arrow-alt bx-sm color-button-iconSecondary' slot="before"></i>
+        </ButtonPrimary>
+    </main>
+
+
+</Layout>

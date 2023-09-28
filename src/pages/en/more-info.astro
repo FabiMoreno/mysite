@@ -1,0 +1,239 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import ButtonPrimary from "../../components/ButtonPrimary.astro";
+import ButtonSecondary from "../../components/ButtonSecondary.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Más info - Fabián Moreno - Product Designer">
+  <Navbar />
+  <main class="flex flex-col justify-center max-w-7xl mx-auto">
+    <section class="flex flex-col px-4 pt-32 pb-12 md:pt-40 md:px-16 gap-10 animate-fade-up delay-150"> 
+      <h1
+        class="flex flex-col text-largeMobile text-color-title lg:text-largeDesktop"
+      >
+        {t('moreinfo-title')}
+      </h1>
+
+      <div class="flex flex-col lg:flex-row items-center align-start gap-8">
+        <img
+          src="https://res.cloudinary.com/dfh5otihs/image/upload/v1694719618/fabian-moreno-profile.webp"
+          alt="foto de Fabián Moreno"
+          class="aspect-auto max-w-xs md:max-w-sm"
+        />
+        <div class="flex flex-col gap-8 items-stretch content-center">
+          <h2 class="text-subtitle1 text-color-subtitle">
+              {t('moreinfo-description')}
+            <br /> 
+            Previously, I worked on improving the investment experience on Wall Street with <a class="underline underline-offset-2  hover:text-violet-50" target="_blank" href="https://www.quiena.com/">Quiena Inversiones</a> as a Lead Product Designer. 
+          </h2>
+      
+
+          <div class="flex flex-col gap-4 md:flex-row md:gap-6">
+            <ButtonPrimary 
+              href="https://drive.google.com/file/d/1Y9eQLmfdx75zj3ot6-CUERw6PVKWmafq/view?usp=sharing"
+              target="_blank"
+              >
+              {t('button-downloadresume')}
+              <i
+                class="
+                  bx bxs-download 
+                  bx-sm color-button-iconPrimary 
+                  bx-fade-left-hover"
+                slot="after">
+              </i>
+            </ButtonPrimary>
+            
+            <ButtonSecondary
+              href="https://www.linkedin.com/in/fabianmorenoc/"
+              target="_blank"
+              >
+              {t('button-checklinkedin')}
+              <i
+                class="
+                  bx bxl-linkedin-square
+                  bx-sm color-button-iconPrimary 
+                  bx-fade-left-hover"
+                slot="after">
+              </i>
+            </ButtonSecondary>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col px-4 py-12 md:px-16 animate-fade-up delay-150">
+      <div class="flex flex-col gap-4">
+        <h2 
+          id="contact"
+          class="
+            text-title2 
+            text-color-title
+            ">
+            {t('moreinfo-contact-title')}
+        </h2>
+        <p class="text-body text-color-body">
+          {t('moreinfo-contact-description')}
+        </p>
+      </div>
+      
+      <form 
+        name="contact" 
+        action="/200" 
+        method="POST" 
+        netlify-honeypot="bot field" 
+        data-netlify="true" 
+        class="max-w-7xl pt-8
+      ">
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
+        <div 
+          class="
+          grid grid-cols-1 
+          gap-x-8 gap-y-6 
+          sm:grid-cols-3
+          ">
+          <div>
+            <label
+              for="first-name"
+              class="block text-action text-color-title font-medium"
+            >
+              {t('moreinfo-contact-name-title')}
+            </label>
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder={t('moreinfo-contact-name-placeholder')}
+                autocomplete="given-name"
+                required 
+                class="
+                  block w-full 
+                  rounded-lg p-4 
+                  text-inputText-textOnFocus 
+                  bg-inputText-bg 
+                  ring-1 ring-inset ring-color ring-inputText-borderDefault
+                  border-[1px] border-inputText-borderDefault 
+                  placeholder:text-inputText-textDefault 
+                  hover:border-inputText-borderHovered hover:ring-inputText-borderHovered 
+                  focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50
+                "/>
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="email"
+              class="
+                block 
+                text-action text-color-title font-medium"
+              >
+              {t('moreinfo-contact-email-title')}
+            </label>
+            <div class="mt-2.5">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder={t('moreinfo-contact-email-placeholder')}
+                autocomplete="email"
+                required 
+                class="
+                  block w-full 
+                  rounded-lg p-4 
+                  text-inputText-textOnFocus bg-inputText-bg
+                  ring-1 ring-inset ring-color ring-inputText-borderDefault 
+                  border-[1px] border-inputText-borderDefault 
+                  placeholder:text-inputText-textDefault 
+                  hover:border-inputText-borderHovered hover:ring-inputText-borderHovered 
+                  focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50
+                "/>
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="subject"
+              class="block text-action text-color-title font-medium"
+              >
+                {t('moreinfo-contact-subject-title')}
+            </label>
+            <div class="mt-2.5">
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder={t('moreinfo-contact-subject-placeholder')}
+                autocomplete="organization"
+                class="
+                  block w-full 
+                  rounded-lg p-4 
+                  text-inputText-textOnFocus 
+                  bg-inputText-bg 
+                  ring-1 ring-inset ring-color ring-inputText-borderDefault 
+                  border-[1px] border-inputText-borderDefault 
+                  placeholder:text-inputText-textDefault 
+                  hover:border-inputText-borderHovered hover:ring-inputText-borderHovered 
+                  focus:ring-4 focus:ring-inset focus:ring-color focus:ring-violet-50
+              "/>
+            </div>
+          </div>
+
+
+          <div class="sm:col-span-3">
+            <label
+              for="message"
+              class="block text-action text-color-title font-medium"
+              >
+              {t('moreinfo-contact-message-title')}
+            </label>
+            <div class="mt-2.5">
+              <textarea name="message" id="message" rows="4" placeholder={t('moreinfo-contact-message-placeholder')}
+                class="w-full rounded-lg p-4
+                  text-inputText-textOnFocus 
+                  ring-1 ring-inset ring-color ring-inputText-borderDefault 
+                  bg-inputText-bg 
+                  border-[1px] border-inputText-borderDefault 
+                  placeholder:text-inputText-textDefault 
+                  hover:border-inputText-borderHovered hover:ring-inputText-borderHovered 
+                  focus:ring-2 focus:ring-inset focus:ring-color focus:ring-violet-50">
+              </textarea>
+            </div>
+          </div>
+
+        </div>
+        <div class="sm:col-span-3 mt-10">
+
+          <button 
+            type="submit"
+            class="
+              flex flex-row w-full 
+              md:w-auto align-middle justify-center
+              bg-button-bgPrimary 
+              text-button-labelPrimary font-semibold 
+              gap-2 px-6 py-4 
+              rounded-lg 
+              hover:bg-button-bgPrimaryHovered hover:shadow-lg 
+              focus:bg-button-bgPrimaryPressed focus:ring-4 focus:ring-violet-10 focus:outline-none
+              duration-200 
+              ">
+              {t('button-send')}
+          </button>
+
+
+        </div>
+      </form>
+
+    </section>
+  </main>
+  <Footer />
+</Layout>
