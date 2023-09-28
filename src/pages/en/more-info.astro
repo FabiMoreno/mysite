@@ -84,7 +84,7 @@ const t = useTranslations(lang);
       
       <form 
         name="contact" 
-        action="/200" 
+        action={`/${lang}/200`} 
         method="POST" 
         netlify-honeypot="bot field" 
         data-netlify="true" 
@@ -197,13 +197,13 @@ const t = useTranslations(lang);
               {t('moreinfo-contact-message-title')}
             </label>
             <div class="mt-2.5">
-              <textarea name="message" id="message" rows="4" placeholder={t('moreinfo-contact-message-placeholder')}
-                class="w-full rounded-lg p-4
+              <textarea name="message" id="message" rows="4" placeholder={t('moreinfo-contact-message-placeholder')} 
+                  class="w-full rounded-lg p-4
                   text-inputText-textOnFocus 
+                  placeholder:text-inputText-textDefault 
                   ring-1 ring-inset ring-color ring-inputText-borderDefault 
                   bg-inputText-bg 
                   border-[1px] border-inputText-borderDefault 
-                  placeholder:text-inputText-textDefault 
                   hover:border-inputText-borderHovered hover:ring-inputText-borderHovered 
                   focus:ring-2 focus:ring-inset focus:ring-color focus:ring-violet-50">
               </textarea>

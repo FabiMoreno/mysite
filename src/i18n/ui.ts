@@ -155,6 +155,12 @@ export const languages = {
     "darkmode": "Dark mode",
     "default": "OS Default",
     "global-cta": "If you're interested in learning more about this and other projects, you can contact me.",
+    "title-200": "Your message has been sent successfully",
+    "description-200": "I will answer within the next 48 business hours.",
+    "button-200": "Go back home",
+    "title-404": "Houston, we have a problem",
+    "description-404": "It seems you've reached a broken, deleted, or even non-existent link. Click the button to return to the homepage.",
+    "button-404": "Go back home",
    
 
     },
@@ -306,7 +312,13 @@ export const languages = {
     "lightmode": "Modo claro",
     "darkmode": "Modo oscuro",
     "default": "Igual a SO",
-    "global-cta": "Si te interesa saber más sobre este y otros proyectos puedes contactarme."
+    "global-cta": "Si te interesa saber más sobre este y otros proyectos puedes contactarme.",
+    "title-200": "Tu mensaje ha sido enviado",
+    "description-200": "Te responderé dentro de las próximas 48 hs hábiles.",
+    "button-200": "Volver al inicio",
+    "title-404": "Houston, tenemos un problema",
+    "description-404": "Parece que llegaste a un link roto, eliminado o que incluso nunca existió. Hace click en el botón para volver al inicio.",
+    "button-404": "Volver al inicio",
 
     
     },
