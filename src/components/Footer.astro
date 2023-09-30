@@ -60,7 +60,7 @@ const t = useTranslations(lang);
       <!-- Dropdown oculto con las opciones-->
       <div
         id="option-themes"
-        class=" hidden z-50 absolute top-[-10rem] right-0 my-4 text-action list-none bg-surface-primary divide-y divide-bg-button-bgTertiaryHoveredrounded-lg shadow-lg hover:text-button-labelTertiaryHovered"
+        class=" hidden z-50 absolute top-[-10rem] right-0 my-4 text-action list-none bg-surface-primary divide-y divide-bg-button-bgTertiaryHovered rounded-lg shadow-lg hover:text-button-labelTertiaryHovered"
         >
         <ul class="  py-2 font-medium" role="none">
 
@@ -164,7 +164,7 @@ const t = useTranslations(lang);
   }
 
   // Agrega un oyente de eventos para cambiar el tema al hacer clic en una opción
-  optionThemes.addEventListener("click", function(event) {
+  optionThemes.addEventListener("click", function(event:any) {
     const selectedTheme = event.target.getAttribute("data-theme") || "";
     applyTheme(selectedTheme);
   });
