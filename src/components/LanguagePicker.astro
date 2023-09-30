@@ -1,5 +1,8 @@
 ---
 import { languages } from '../i18n/ui';
+
+// entries example
+// { es: 'hola', en: 'chau' } => [['es', 'hola'], ['en', 'chau']]
 ---
 <ul>
   {Object.entries(languages).map(([lang, label]) => (
