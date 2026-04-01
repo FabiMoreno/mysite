@@ -10,9 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.9.3",
-    "tailwindcss": "^3.3.3",
-    "typed.js": "^2.0.16"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.2",
+    "tailwindcss": "^4.2.2",
+    "typed.js": "^3.0.0"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
