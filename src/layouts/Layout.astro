@@ -5,8 +5,24 @@ interface Props {
 }
 const { title } = Astro.props;
 
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// El inglés es el idioma por defecto del sitio. La raíz (/) sirve el mismo
+// contenido que /en/, así que su canonical apunta a /en/ para consolidar la
+// señal de SEO en la versión inglesa en lugar de competir consigo misma.
+const SITE = 'https://fabimoreno.com';
+const path = Astro.url.pathname;
+const isRoot = path === '/' || path === '';
+const rest = isRoot ? '/' : path.replace(/^\/(en|es)(?=\/|$)/, '') || '/';
+
+const enUrl = `${SITE}/en${rest === '/' ? '/' : rest}`;
+const esUrl = `${SITE}/es${rest === '/' ? '/' : rest}`;
+const canonical = isRoot ? enUrl : `${SITE}${path}`;
+
+const description = t('meta-description');
+const ogLocale = lang === 'es' ? 'es_AR' : 'en_US';
 ---
 
 <!DOCTYPE html>
@@ -14,23 +30,30 @@ const lang = getLangFromUrl(Astro.url);
   <head>
     <!--HTML Meta Tags -->
     <title>{title}</title>
-    <meta name="description" content="Sr UX Designer con más de 10 años de experiencia desarrollando productos que generen un impacto positivo en las personas." />
+    <meta name="description" content={description} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#100D18">
-    
+
+    <!--Canonical y alternativas de idioma -->
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
     <!--Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@fabimoreno27" />
-    <meta name="twitter:title" content="Fabián Moreno | Product Designer">
-    <meta name="twitter:description" content="Senior UX Product Designer with over 8 years of experience designing digital tools to create a positive impact on individuals, businesses, and teams.">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
     <meta name="twitter:image:src" content="https://res.cloudinary.com/dfh5otihs/image/upload/v1695885548/OP-home.webp">
-   
+
     <!--Facebook and more Meta Tags -->
-    <meta property="og:title" content="website" />
-    <meta property="og:url" content="https://www.fabimoreno.com/" />
-    <meta property="og:title" content="Fabián Moreno | Product Designer" />
-    <meta property="og:description" content="Sr UX Product Designer with over 8 years of experience designing digital tools to create a positive impact on individuals, businesses, and teams." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:image" content="https://res.cloudinary.com/dfh5otihs/image/upload/v1695885548/OP-home.webp" />
     <meta property="og:image:width" content="640" />
     <meta property="og:image:height" content="360" />

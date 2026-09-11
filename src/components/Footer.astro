@@ -4,6 +4,8 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+// Se calcula en cada build para que el año no vuelva a quedar desactualizado.
+const year = new Date().getFullYear();
 ---
 
 <footer class="flex flex-col w-full bg-surface-secondary px-8 py-12 gap-10">
@@ -103,7 +105,7 @@ const t = useTranslations(lang);
   <small
     class=" justify-center text-center text-overlineSm uppercase text-color-caption md:text-overline"
   >
-    ©Fabian Moreno · 2023<br />Built with ❤️, <a target="_blank" href="https://astro.build/" class="hover:underline"> Astro,</a> <a target="_blank" href="https://tailwindcss.com/" class="hover:underline">Tailwind</a> & <a target="_blank" href="https://www.netlify.com/" class="hover:underline">Netlify</a>
+    ©Fabián Moreno · {year}<br />Built with ❤️, <a target="_blank" href="https://astro.build/" class="hover:underline"> Astro,</a> <a target="_blank" href="https://tailwindcss.com/" class="hover:underline">Tailwind</a> & <a target="_blank" href="https://www.netlify.com/" class="hover:underline">Netlify</a>
   </small>
 </footer>
 
