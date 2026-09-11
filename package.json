@@ -2,6 +2,9 @@
   "name": "mysite",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,12 +13,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.2",
-    "tailwindcss": "^4.2.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.2",
+    "tailwindcss": "^4.3.3",
     "typed.js": "^3.0.0"
-  },
-  "overrides": {
-    "vite": "^7"
   }
 }
